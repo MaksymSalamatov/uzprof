@@ -1,0 +1,39 @@
+@import 'media-grid';
+@import 'mixins';
+
+
+html {
+  height: 100%;
+}
+
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  @include fonts(18px, 29px, 400);
+  color: $main;
+  background: $white;
+
+  &::-webkit-scrollbar{
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track{
+    background: rgb(224, 219, 219);
+  }
+  &::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg, #aa7512 0.14%, #ad4102 100%);
+    border-radius: 6px;
+    border: 1px solid rgb(224, 219, 219);
+  }
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+

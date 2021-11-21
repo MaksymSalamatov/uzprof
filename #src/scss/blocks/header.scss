@@ -1,0 +1,309 @@
+@import '../basik/variables';
+@import '../basik/mixins';
+@import '../basik/media-grid';
+
+.header{
+  position: fixed;
+  background: $white;
+  width: 100%;
+  padding-top: 5px;
+  z-index: 20;
+  &__container{
+    @include flex(center, space-between);
+    padding: 20px 0;
+    @media (max-width: $lg-min) {
+      @include flex(center, space-between);
+      padding: 0 30px;
+      &:last-child{
+        margin-right: 70px;
+      }
+    }
+
+    @media (max-width: $sm-min) {
+      padding: 0 10px;
+      &:last-child{
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .burger{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 40px;
+    margin: 20px;
+    width: 40px;
+    height: 30px;
+    display: none;
+
+    @media (max-width: $lg-min) {
+      display: block;
+    }
+    @media (max-width: $sm-min) {
+      right: 10px;
+    }
+
+    &__item{
+      background: $blue;
+      position: inherit;
+      width: 100%;
+      height: 3px;
+      right: 0;
+      transition: all .3s ease;
+
+      &:nth-child(2){
+        top: 50%;
+        width: 80%;
+        transform: translateY(-50%);
+      }
+      &:nth-child(3){
+        bottom: 0;
+        width: 60%;
+      }
+    }
+
+    &.show{
+      z-index: 50;
+      .burger__item{
+        &:nth-child(1){
+          transform: rotate(45deg);
+          bottom: 13px;
+          width: 60%;
+        }
+        &:nth-child(2){
+          transform: scale(0);
+        }
+        &:nth-child(3){
+          transform: rotate(-45deg);
+          bottom: 13px;
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  &__change{
+    @media (max-width: $lg-min) {
+      position: absolute;
+      top: -100%;
+      right: 0;
+      flex-direction: column;
+      @include flex(center, center);
+      width: 100%;
+      height: 100vh;
+      background-color: $white;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s ease;
+      overflow: auto;
+    }
+
+    &.show{
+      top: -25px;
+      opacity: 1;
+      visibility: visible;
+      z-index: 5;
+    }
+  }
+
+  &__back{
+    background: $grey-light;
+    width: 23%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    border-radius: 0 0 60px 0;
+  }
+
+  &__logo{
+    @include flex(center, center);
+    .logo{
+      &__picture{
+        &_img{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  &__menu{
+    @include flex(center, space-around);
+
+    @media (max-width: $lg-min) {
+      @include flex(center, center);
+    }
+
+    &.show{
+      z-index: 40;
+    }
+    .menu{
+      &__submenu{
+        visibility: hidden;
+        position: absolute;
+        transition: .3s;
+        color: $main;
+        width: 160px;
+
+        &:hover{
+          color: $blue-light;
+        }
+        & li{
+          background: $white;
+          border-radius: 5px;
+          padding: 20px;
+          right: 10%;
+          transform: translateX(-12%);
+          @media (max-width: $lg-min) {
+            padding: 0 20px 20px 20px;
+          }
+        }
+      }
+
+      &__links{
+        position: relative;
+      }
+
+      &__main{
+        @include flex(center, center);
+
+        @media (max-width: $lg-min) {
+          flex-direction: column;
+          @include flex(flex-start, flex-start);
+          margin: 60px auto auto 30px;
+          color: $black;
+        }
+      }
+      &__items{
+        object-fit: fill;
+        cursor: pointer;
+        transition: .3s;
+        display: inline-block;
+        position: relative;
+        &:hover{
+          color: $blue-light;
+        }
+        &:hover ul{
+          visibility: visible;
+          transition: .3s;
+
+        }
+        &:hover span{
+          transform: rotate(225deg);
+          transition: .3s;
+          border: solid $blue-light;
+          border-width: 0 1px 1px 0;
+          top: 46%;
+
+        }
+        &:not(:last-child){
+          margin-right: 50px;
+          @media (max-width: $lg-min) {
+            margin-right: 0;
+          }
+        }
+        span{
+          border: solid $black;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
+          position: absolute;
+          transition: .3s;
+          top: 38%;
+          right: -15px;
+        }
+
+        @media (max-width: $lg-min) {
+          &:hover{
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  &__btn{
+    &_register{
+
+      @media (max-width: $lg-min) {
+        background: $orange;
+        padding: 10px 90px;
+      }
+
+      @media (max-width: $sm-min) {
+        padding: 10px 40px;
+      }
+    }
+  }
+
+  &__registry{
+    @include flex(center, space-between);
+    margin-left: 140px;
+    :not(:last-child){
+      margin-right: 20px;
+    }
+    @media (max-width: $lg-min) {
+      @include flex(center, center);
+      margin: 0 0 20px 0;
+      flex-direction: column;
+    }
+
+    .login{
+      &__enterence{
+        @include flex(center, space-between);
+      }
+      &__picture{
+        margin-right: 10px;
+      }
+      @media (max-width: $lg-min) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+
+  &__select{
+    padding-right: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media (max-width: $sm-min) {
+      padding-right: 40px;
+    }
+    &:hover .language{
+      visibility: visible;
+      transition: all .3s ease;
+    }
+    button{
+      position: absolute;
+      text-transform: uppercase;
+    }
+    .language{
+      position: relative;
+      right: 5px;
+      top: 45px;
+      visibility: hidden;
+      transition: .3s;
+      background: $white;
+      border-radius: 5px;
+
+    }
+    @include flex(center, center);
+    &:hover span{
+      transform: rotate(180deg);
+      transition: .3s;
+    }
+    span{
+      background: url("../../img/firstScreen/arrow.png") no-repeat right center;
+      transition: .3s;
+      width: 9px;
+      height: 5px;
+      position: relative;
+      left: 40px;
+    }
+  }
+
+}

@@ -1,0 +1,66 @@
+@import '../basik/variables';
+@import '../basik/mixins';
+
+
+
+.stop-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+.hover-links{
+  &:hover{
+    color: $blue-light;
+  }
+}
+
+.ibg{
+  position: relative;
+}
+
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.btn {
+  background: $orange;
+  padding: 10px 34px;
+  color: $white;
+  border-radius: 20px 6px;
+  border: 1px solid transparent;
+  transition: .3s;
+
+  &:hover{
+    background: transparent;
+    color: $orange;
+    border: 1px solid $orange;
+    transition: .3s;
+  }
+}

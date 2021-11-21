@@ -1,0 +1,38 @@
+@import "mixins";
+@import "variables";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  color: $black;
+}
+
+h1{
+  @include fonts(48px, 58px, 700);
+  color: $white;
+  @media (max-width: $md-min) {
+    @include fonts(60px, 70px, 700);
+  }
+
+  @media (max-width: $sm-min) {
+    @include fonts(50px, 50px, 700);
+  }
+}
+
+h2{
+  @include fonts(85px, 94px, 700);
+}
+
+h3{
+  @include fonts(42px, 50px, 700);
+}
+
+h4{
+  @include fonts(32px, 38px, 700);
+}
+h5{
+  @include fonts(21px, 28px, 400);
+}
+h6{
+  @include fonts(18px, 27px, 700);
+}
+

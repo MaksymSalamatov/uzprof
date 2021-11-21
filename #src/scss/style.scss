@@ -1,0 +1,247 @@
+@import './basik/index';
+@import './customize/index';
+@import './blocks/index';
+
+// firstScreen
+
+.first-screen{
+  margin-top: 60px;
+  position: relative;
+  color: $white;
+  .container{
+    border: 1px solid red;
+  }
+
+  &__content{
+    padding: 201px 0 292px 100px;
+    position: relative;
+    z-index: 2;
+    max-width: 589px;
+    @media (max-width: $lg-min) {
+      padding: 201px 0 182px 100px;
+    }
+    @media (max-width: $md-min) {
+      padding: 101px 0 292px 0;
+      max-width: 389px;
+    }
+  }
+
+  &__title{
+    margin-bottom: 20px;
+  }
+
+  &__text{
+    margin-bottom: 50px;
+    max-width: 420px;
+  }
+
+  &__button{
+    a{
+      font-weight: bold;
+      padding: 23px 61px;
+      border: none;
+      transition: all .3s ease;
+      &:hover{
+        background: linear-gradient(to right, #1C2E6A, #FA803C);
+        border: none;
+        color: $white;
+        transition: all .3s ease;
+      }
+    }
+  }
+
+  &__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    display:block;
+
+    &_bg{
+      position:absolute;
+      width: 100%;
+      height:100%;
+      @media (max-width: $md-min) {
+        background: rgba(0,0,0,0.5);
+      }
+    }
+  }
+}
+
+// services
+
+.services{
+  #wrapper{
+    position: relative;
+  }
+
+  .contentContainer{
+    padding: 0 15px;
+    border: 1px solid red;
+    position: relative;
+    top: 0;
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+
+  #navLinks{
+    text-align: center;
+    width: 550px;
+    margin: 0 auto;
+
+    & ul{
+      margin: 6px 0 0 0;
+      padding: 0;
+      display: inline-block;
+
+      & li{
+        float: left;
+        text-align: center;
+        margin: 10px;
+        list-style: none;
+        cursor: pointer;
+        background-color: #CCCCCC;
+        padding: 5px;
+        border-radius: 50%;
+        border: $grey-dark 5px solid;
+        transition: all .3s ease;
+
+        &:hover{
+          background-color: $blue-light;
+          transition: all .3s ease;
+        }
+        &.active{
+          background-color: #333333;
+          color: #FFFFFF;
+          outline-width: 7px;
+
+          &:hover{
+            background-color: #484848;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__content{
+    @include flex(center, center);
+  }
+
+  &__column{
+    padding: 0 15px;
+    position: relative;
+    flex: 0 0 25%;
+    top: 0;
+    transform: translateY(-30%);
+
+    .item-services{
+      top: 0;
+      border: 7px solid transparent;
+      border-radius: 12px 12px 34px 12px;
+      background-image: linear-gradient(white, white),
+                          linear-gradient(to top, $blue-light 50%, $white 50%);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      z-index: 30;
+      transition: all 2s ease;
+      transform: translateY(30%);
+
+
+      &:hover{
+        animation: border 4s ease ;
+
+        @keyframes border {
+          from{
+            background-image: linear-gradient(white, white),
+            linear-gradient(to top, $blue-light 50%, $blue-light 5%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+          }
+          25% {
+            background-image: linear-gradient(white, white),
+            linear-gradient(to top, $blue-light 50%, $blue-light 20%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+          }
+          50% {
+            background-image: linear-gradient(white, white),
+            linear-gradient(to top, $blue-light 50%, $blue-light 35%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+          }
+          75% {
+            background-image: linear-gradient(white, white),
+            linear-gradient(to top, $blue-light 50%, $blue-light 40%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+          }
+          to {
+            background-image: linear-gradient(white, white),
+            linear-gradient(to top, $blue-light 50%, $blue-light 50%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+          }
+        }
+      }
+
+      &:hover .bg{
+        height: 100%;
+        transition: all .3s ease;
+        border-radius: 6px 6px 28px 6px;
+      }
+
+      @media (max-width: $lg-min) {
+      }
+
+
+      &__image img{
+        position: relative;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 12px 12px 34px 12px;
+      }
+
+      &__text{
+        position: absolute;
+        bottom: 30%;
+        transform: translateY(50%);
+        left: 25px;
+        color: $white;
+        max-width: 219px;
+        z-index: 2;
+        padding-left: 10px;
+        @media (max-width: $lg-min) {
+          @include fonts(14px, 18px);
+          max-width: 250px;
+          bottom: 30px;
+          left: 10px;
+        }
+      }
+
+      &__bg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgb(0, 0, 0, 0.5);
+        border-radius: 0 0 28px 6px;
+        transition: all .3s ease;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// reasons
+
+.reasons{
+
+  &__contant{
+    margin-top: 200px;
+  }
+}
