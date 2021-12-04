@@ -19,7 +19,7 @@ h1{
 }
 
 h2{
-  @include fonts(85px, 94px, 700);
+  @include fonts(48px, 58px, 700);
 }
 
 h3{
@@ -27,7 +27,7 @@ h3{
 }
 
 h4{
-  @include fonts(32px, 38px, 700);
+  @include fonts(25px, 36px, 700);
 }
 h5{
   @include fonts(21px, 28px, 400);

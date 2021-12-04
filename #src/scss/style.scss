@@ -73,62 +73,18 @@
 // services
 
 .services{
-  #wrapper{
-    position: relative;
+  @media (max-width: $md-min) {
+    display: none;
   }
-
   .contentContainer{
     padding: 0 15px;
-    border: 1px solid red;
     position: relative;
     top: 0;
     transform: translateY(-50%);
-    overflow: hidden;
   }
-
-  #navLinks{
-    text-align: center;
-    width: 550px;
-    margin: 0 auto;
-
-    & ul{
-      margin: 6px 0 0 0;
-      padding: 0;
-      display: inline-block;
-
-      & li{
-        float: left;
-        text-align: center;
-        margin: 10px;
-        list-style: none;
-        cursor: pointer;
-        background-color: #CCCCCC;
-        padding: 5px;
-        border-radius: 50%;
-        border: $grey-dark 5px solid;
-        transition: all .3s ease;
-
-        &:hover{
-          background-color: $blue-light;
-          transition: all .3s ease;
-        }
-        &.active{
-          background-color: #333333;
-          color: #FFFFFF;
-          outline-width: 7px;
-
-          &:hover{
-            background-color: #484848;
-            color: #FFFFFF;
-          }
-        }
-      }
-    }
-  }
-
 
   &__content{
-    @include flex(center, center);
+    @include flex(center, space-around);
   }
 
   &__column{
@@ -140,68 +96,48 @@
 
     .item-services{
       top: 0;
-      border: 7px solid transparent;
       border-radius: 12px 12px 34px 12px;
-      background-image: linear-gradient(white, white),
-                          linear-gradient(to top, $blue-light 50%, $white 50%);
-      background-origin: border-box;
-      background-clip: content-box, border-box;
       z-index: 30;
-      transition: all 2s ease;
       transform: translateY(30%);
 
 
-      &:hover{
-        animation: border 4s ease ;
+      &:before, &:after{
+        content: '';
+        position: absolute;
+        left: -4px;
+        right: -4px;
+        width: calc(100% + 8px);
+        height: 52%;
+      }
 
-        @keyframes border {
-          from{
-            background-image: linear-gradient(white, white),
-            linear-gradient(to top, $blue-light 50%, $blue-light 5%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-          }
-          25% {
-            background-image: linear-gradient(white, white),
-            linear-gradient(to top, $blue-light 50%, $blue-light 20%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-          }
-          50% {
-            background-image: linear-gradient(white, white),
-            linear-gradient(to top, $blue-light 50%, $blue-light 35%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-          }
-          75% {
-            background-image: linear-gradient(white, white),
-            linear-gradient(to top, $blue-light 50%, $blue-light 40%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-          }
-          to {
-            background-image: linear-gradient(white, white),
-            linear-gradient(to top, $blue-light 50%, $blue-light 50%);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-          }
-        }
+      &:before{
+        top: -4px;
+        background-color: white;
+        border-radius: 12px 12px 0 0;
+        transition: all .7s ease;
+      }
+
+      &:after{
+        bottom: -4px;
+        background-color: $blue-light;
+        z-index: -1;
+        border-radius: 0 0 34px 12px;
       }
 
       &:hover .bg{
         height: 100%;
         transition: all .3s ease;
-        border-radius: 6px 6px 28px 6px;
+        border-radius: 12px 12px 34px 12px;
       }
 
-      @media (max-width: $lg-min) {
+      &:hover:before{
+        background-color: $blue-light;
+        transition: all .7s ease;
       }
-
 
       &__image img{
         position: relative;
         width: 100%;
-        object-fit: contain;
         border-radius: 12px 12px 34px 12px;
       }
 
@@ -209,16 +145,20 @@
         position: absolute;
         bottom: 30%;
         transform: translateY(50%);
-        left: 25px;
+        left: 10px;
         color: $white;
-        max-width: 219px;
+        max-width: 260px;
         z-index: 2;
         padding-left: 10px;
+        letter-spacing: 2px;
+        @include fonts(18px, 29px);
+
         @media (max-width: $lg-min) {
-          @include fonts(14px, 18px);
+          @include fonts(12px, 16px);
           max-width: 250px;
-          bottom: 30px;
-          left: 10px;
+          bottom: 35px;
+          letter-spacing: 1px;
+          left: 0;
         }
       }
 
@@ -229,9 +169,9 @@
         width: 100%;
         height: 50%;
         background: rgb(0, 0, 0, 0.5);
-        border-radius: 0 0 28px 6px;
         transition: all .3s ease;
         cursor: pointer;
+        border-radius: 0 0 34px 12px;
       }
     }
   }
@@ -240,8 +180,214 @@
 // reasons
 
 .reasons{
+  @media (max-width: $md-min) {
+    padding-top: 60px;
+  }
+  @media (max-width: $sm-min) {
+    padding-top: 40px;
+  }
+  &__title{
+    margin-bottom: 40px;
+    text-align: center;
 
-  &__contant{
-    margin-top: 200px;
+    @media (max-width: $sm-min) {
+      @include fonts(38px, 48px, 700);
+    }
+  }
+
+  &__info{
+    @include flex(flex-start, center);
+
+    @media (max-width: $xl-mid) {
+      @include flex(center, center);
+      flex-direction: column;
+    }
+
+    .column{
+      margin-right: 20px;
+      @media (max-width: $xl-mid) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__one, &__two{
+    @include flex(flex-start, space-around);
+    @media (max-width: $xl-mid) {
+      width: 100%;
+
+      &:not(:last-child){
+        margin-bottom: 30px;
+
+        @media (max-width: $md-min) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+
+    @media (max-width: $md-min) {
+      @include flex(center, space-between);
+      flex-direction: column;
+    }
+
+    .column{
+      padding: 30px 30px 40px 40px;
+
+      @media (max-width: $sm-min) {
+        padding: 20px 5px 30px 10px;
+      }
+    }
+  }
+
+  &__two{
+    margin-left: 20px;
+    @media (max-width: $xl-mid) {
+      margin-left: 0;
+    }
+    .button{
+      clip-path: polygon(0 0,80% 0,100% 50%,80% 100%,0 100%);
+      background-color: $light-sky;
+      cursor: pointer;
+      position: relative;
+      transition: all .3s ease;
+      display: inline-block;
+      padding: 0 129px 0 82px;
+      min-width: 360px;
+      overflow: hidden;
+
+      @media (max-width: $xl-mid) {
+        width: 510px;
+        clip-path: none;
+        border-radius: 10px 50px;
+      }
+
+      @media (max-width: $lg-min) {
+        padding: 0;
+        width: 48%;
+      }
+      @media (max-width: $md-min) {
+        width: 70%;
+        min-width: 0;
+      }
+
+      @media (max-width: $sm-min) {
+        width: 90%;
+        border-radius: 10px  10px 50px 50px;
+      }
+
+      &:hover .button__text{
+        text-decoration: underline;
+        transition: all .3s ease;
+      }
+
+      &:hover .button__arrow{
+        right: -30px;
+        transition: all .3s ease;
+      }
+
+      &:hover:after{
+        transform: translate(-40%, -50%);
+        transition: transform .3s ease;
+      }
+      &:active:after{
+        transform: translate(70%, -50%);
+        transition: transform .3s ease;
+      }
+
+      &:after{
+        z-index: 2;
+        height: 346px;
+        width: 346px;
+        border-radius: 50%;
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: -50px;
+        transform: translate(-200%, -50%);
+        transition: transform .3s ease;
+        background-color: $blue;
+        filter: blur(50px);
+      }
+
+      &__container{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @include flex(flex-end, center);
+        z-index: 3;
+
+        @media (max-width: $xl-mid) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &__text{
+        max-width: 149px;
+        color: $white;
+        margin-right: 10px;
+        transition: all .3s ease;
+        position: relative;
+
+        @media (max-width: $md-min) {
+          max-width: 149px;
+          text-align: center;
+        }
+
+      }
+
+      &__arrow{
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        transform: translateY(-10%);
+        transition: all .3s ease;
+      }
+    }
+  }
+
+  &__column{
+    background-color: $grey-light;
+    border-radius: 10px 10px 50px 50px;
+    min-height: 425px;
+    max-width: 360px;
+
+    @media (max-width: $xl-mid) {
+      max-width: 510px;
+    }
+    @media (max-width: $lg-min) {
+      width: 48%;
+    }
+    @media (max-width: $md-min) {
+      margin-bottom: 30px;
+      width: 70%;
+    }
+    @media (max-width: $sm-min) {
+      width: 95%;
+    }
+  }
+
+  .column{
+    &__picture{
+      margin-bottom: 25px;
+
+      @media (max-width: $sm-min) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__title{
+      margin-bottom: 20px;
+      color: $black;
+      @include fonts(22px, 32px, 700);
+      @media (max-width: $sm-min) {
+        margin-bottom: 10px;
+        @include fonts(18px, 32px, 700);
+      }
+    }
+    @media (max-width: $md-min) {
+      min-height: auto;
+    }
   }
 }

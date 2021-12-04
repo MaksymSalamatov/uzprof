@@ -4,6 +4,11 @@
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1530px;
+  border: 1px solid red;
+
+  @media (max-width: $xl-mid) {
+    max-width: 1300px;
+  }
 
   @media (max-width: $lg-min) {
     max-width: 1000px;
