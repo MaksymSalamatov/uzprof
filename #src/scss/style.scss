@@ -415,6 +415,7 @@
 // banner
 
 .banner{
+  position: relative;
   margin-right: calc(50% - 765px);
 
   @media (max-width: $xl-mid) {
@@ -545,6 +546,126 @@
             height: 97px;
           }
         }
+      }
+    }
+  }
+
+  &__dotes{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    z-index: -1;
+  }
+}
+
+//product
+
+.product{
+  padding-top: 150px;
+
+  &__content{
+    @include flex(center, space-around);
+  }
+
+  .information{
+    max-width: 490px;
+
+    &__title{
+      margin-bottom: 30px;
+    }
+
+    &__about{
+      margin-bottom: 40px;
+    }
+
+    &__btn{
+      max-width: 300px;
+      text-align: center;
+      padding: 22px 82px;
+      color: $white;
+      background-color: $orange;
+
+      &:hover{
+        color: $orange;
+        background-color: $white;
+        border: 1px solid $orange;
+      }
+      &:active{
+        color: $white;
+        background-color: $orange;
+      }
+    }
+  }
+
+  .crypto{
+    &__item{
+      @include flex(center, flex-between);
+      background: $white;
+      box-shadow: 0 4px 66px rgba(207, 207, 207, 0.25);
+      border-radius: 5px;
+      padding: 20px 25px 35px 20px;
+      width: 250px;
+    }
+
+    &__picture{
+      margin-right: 13px;
+    }
+    &__name{
+      max-width: 82px;
+      margin-right: 20px;
+      &_main{
+        color: $black;
+        @include fonts(20px, 29px, 400);
+      }
+    }
+    &__arrows{
+      &_top{
+        animation: arrowTop 1.5s ease infinite;
+        @keyframes arrowTop {
+          from {
+            margin-bottom: 0;
+          }
+
+          50% {
+            margin-bottom: 20px;
+          }
+
+          to {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &_bottom{
+        animation: arrowbottom 1.5s ease infinite;
+        @keyframes arrowbottom {
+          from {
+            margin-top: 0;
+          }
+
+          50% {
+            margin-top: 20px;
+          }
+
+          to {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    &__content{
+      position: relative;
+
+      &_link{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .item-1{
+        top: 100px;
+        left: 100px;
       }
     }
   }
