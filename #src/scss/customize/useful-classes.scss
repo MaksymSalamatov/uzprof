@@ -64,4 +64,9 @@
     border: 1px solid $orange;
     transition: .3s;
   }
+  &:active{
+    background: $orange;
+    color: $white;
+    transition: .3s;
+  }
 }

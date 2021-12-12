@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1530px;
-  border: 1px solid red;
 
   @media (max-width: $xl-mid) {
     max-width: 1300px;
@@ -19,11 +18,15 @@
   @media (max-width: $sm-min) {
     max-width: 516px;
   }
+  @media (max-width: $ss-min) {
+    max-width: 488px;
+  }
 }
-
 .container-max{
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1920px;
-  border: 1px solid green;
+  @media (max-width: $xl-max) {
+    max-width: 1819px;
+  }
 }

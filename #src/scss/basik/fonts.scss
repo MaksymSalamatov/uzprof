@@ -36,3 +36,8 @@ h6{
   @include fonts(18px, 27px, 700);
 }
 
+
+@font-face {
+  font-family: "Quikhand";
+  src: url("../../fonts/quickhand/Quikhand.woff");
+}
