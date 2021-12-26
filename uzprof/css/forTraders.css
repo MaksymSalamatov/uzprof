@@ -1547,6 +1547,208 @@ strong {
   left: 40px;
 }
 
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.traders {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.traders {
+  padding-top: 130px;
+}
+
+.traders__main {
+  margin-bottom: 170px;
+}
+
+.traders__link {
+  margin-bottom: 70px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.traders__link-none {
+  font-weight: bold;
+  color: #0A1F32;
+}
+
+.traders__title {
+  color: #0A1F32;
+  margin-bottom: 40px;
+}
+
+.traders__info {
+  max-width: 560px;
+  margin-bottom: 60px;
+}
+
+.traders__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.traders__items-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.traders__items_top {
+  margin-bottom: 40px;
+}
+
+.traders__items .item {
+  z-index: 3;
+  margin: 0 10px;
+}
+
+.traders__items .item__content {
+  max-width: 480px;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.traders__items .item__content:after,
+.traders__items .item__content:before {
+  z-index: -1;
+  content: "";
+  background: #ffffff;
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  position: absolute;
+  width: calc(50% + 4px);
+  height: calc(100% + 4px);
+}
+
+.traders__items .item__content:before {
+  border-radius: 10px 0 0 10px;
+  top: -2px;
+  left: -2px;
+}
+
+.traders__items .item__content:after {
+  border-radius: 0 10px 50px 0;
+  right: -2px;
+  bottom: -2px;
+}
+
+.traders__items .item__content:hover:after {
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  background-color: #FF813A;
+}
+
+.traders__items .item__content:hover:before {
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  background-color: #003458;
+}
+
+.traders__items .item__content:hover {
+  cursor: pointer;
+}
+
+.traders__items .item__content:hover .information__link-active,
+.traders__items .item__content .information__link-arrow {
+  color: #FF813A;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.traders__items .item__content:hover .information__link-active {
+  margin-right: 20px;
+  -webkit-transition: margin-right 0.3s ease;
+  -o-transition: margin-right 0.3s ease;
+  transition: margin-right 0.3s ease;
+}
+
+.traders__items .item__picture img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.traders__items .item__title {
+  position: absolute;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50px;
+  color: #ffffff;
+}
+
+.traders__items .item .information {
+  padding: 40px 64px 40px 50px;
+  z-index: 3;
+  background-color: #F9F9FB;
+  border-radius: 0 0 50px 10px;
+}
+
+.traders__items .item .information__about {
+  margin-bottom: 40px;
+}
+
+.traders__items .item .information__link {
+  color: #0A1F32;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.traders__items .item .information__link-arrow {
+  color: #687086;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.traders__items .item .information__link-active {
+  margin-right: 10px;
+  -webkit-transition: margin-right 0.3s ease;
+  -o-transition: margin-right 0.3s ease;
+  transition: margin-right 0.3s ease;
+}
+
 @media (max-width: 1919px) {
   .container-max {
     max-width: 1819px;
@@ -1747,6 +1949,40 @@ strong {
   .header__registry .login {
     margin-bottom: 20px;
   }
+
+  .traders__main {
+    margin-bottom: 100px;
+  }
+
+  .traders__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .traders__items-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .traders__items .item {
+    margin-bottom: 20px;
+  }
+
+  .traders__items .item .information {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -1778,6 +2014,29 @@ strong {
 
   .container {
     max-width: 690px;
+  }
+
+  .traders__main {
+    margin-bottom: 70px;
+  }
+
+  .traders__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .traders__items .item {
+    width: 100%;
   }
 }
 
@@ -1931,6 +2190,18 @@ strong {
 
   .header__select {
     padding-right: 40px;
+  }
+
+  .traders__main {
+    margin-bottom: 30px;
+  }
+
+  .traders__items .item {
+    margin-bottom: 30px;
+  }
+
+  .traders__items .item__title {
+    top: 16%;
   }
 }
 

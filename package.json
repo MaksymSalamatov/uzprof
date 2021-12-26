@@ -11,6 +11,8 @@
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
+		"gulp-concat": "^2.6.1",
+		"gulp-concat-util": "^0.5.5",
 		"gulp-file-include": "latest",
 		"gulp-fonter": "latest",
 		"gulp-group-css-media-queries": "latest",

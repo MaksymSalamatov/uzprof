@@ -1,214 +1,221 @@
-const burger = document.querySelector('.burger'),
-      change = document.querySelectorAll('.header__change');
+// burger
 
+function header() {
+    const burger = document.querySelector('.burger'),
+          change = document.querySelectorAll('.header__change'),
+          overlay = document.querySelector('.page-overlay'),
+          body = document.querySelector('body');
 
-function toggle(){
-    burger.classList.toggle('show');
-    change.classList.toggle('show')
-}
+    function toggle(){
+        overlay.classList.toggle('show');
+        burger.classList.toggle('show');
+        body.classList.toggle('stop-scroll');
+    }
 
-function listener(list, event = 'click', callback){
-    list.addEventListener(event, callback);
-}
-listener(burger, 'click', toggle);
-
-burger.addEventListener('click', () => {
-    change.forEach(item => {
-        item.classList.toggle('show')
+    burger.addEventListener('click', () => {
+        toggle();
     })
-})
 
-// // slider
-//
-//
-// let links = document.querySelectorAll('.itemLinks'),
-//     wrapper = document.querySelector('#wrapper');
-//
-// let activeLink = 0;
-//
-// for (let i = 0; i < links.length; i++) {
-//     let link = links[i];
-//     link.addEventListener('click', setClickedItem, false);
-//     link.itemID = i;
-// }
-//
-// links[activeLink].classList.add("active");
-//
-// function setClickedItem(e) {
-//     removeActiveLinks();
-//
-//     let clickedLink = e.target;
-//     activeLink = clickedLink.itemID;
-//
-//     changePosition(clickedLink);
-// }
-//
-// function removeActiveLinks() {
-//     for(let i = 0; i < links.length; i++) {
-//         links[i].classList.remove("active");
-//     }
-// }
-//
-// function changePosition(link) {
-//     link.classList.add("active");
-//
-//     let position = link.getAttribute("data-pos");
-//     wrapper.style.left = position;
-// }
+    burger.addEventListener('click', () => {
+        change.forEach(item => {
+            item.classList.toggle('show')
+        })
+    });
+}
 
+function accordionSlide(clickedItem, itemToShow) {
+    document.querySelectorAll(clickedItem).forEach((item) => {
+        item.addEventListener('click', () => {
+            const content = item.nextElementSibling;
+
+            if(content.style.maxHeight) {
+                document.querySelectorAll(itemToShow).forEach((element) => {
+                    element.style.maxHeight = null
+                })
+            } else {
+                document.querySelectorAll(itemToShow).forEach((element) => {
+                    element.style.maxHeight = null
+                })
+                content.style.maxHeight = content.scrollHeight + 'px'
+            }
+        })
+    })
+
+    document.querySelectorAll(itemToShow).forEach(item => {
+        item.addEventListener('click', () => {
+            if(item.style.maxHeight) {
+                item.style.maxHeight = null
+            }
+        })
+    })
+}
+
+(function () {
+   let check = document.querySelector('.check')
+    if(!check) return
+
+    header()
 
 
 /// forex
+    let checkForex = document.querySelector('.forex__tab-title')
+    if(checkForex){
+        accordionSlide('.forex__tab-title', '.forex__tab-content');
+        accordionSlide('.about__title', '.about__column');
+    } else if(!checkForex) {
+        accordionSlide('.about__title', '.about__column');
+    }
 
-document.querySelectorAll('.forex__tab-title').forEach(item => {
-    item.addEventListener('click', () => {
-        const parent = item.parentNode;
+// slide-show
 
-        const heightRow = item.nextSibling;
-        console.log(heightRow)
+    (function () {
+        let position = 0;
+        const slideToShow = 2;
+        const slideToScroll = 1;
+        const container = document.querySelector('.slider-container');
+        const track = document.querySelector('.slider-track');
+        const btnNext = document.querySelector('.btn-next');
+        const btnPrev = document.querySelector('.btn-prev');
+        const items = document.querySelectorAll('.slider__item');
+        const itemsCount = items.length;
+        const itemWidth = container.clientWidth / slideToShow;
+        const movePosition = slideToShow * itemWidth;
 
-        if(parent.classList.contains('forex__tab-active')) {
-            parent.classList.remove('forex__tab-active')
-        } else {
-            document
-                .querySelectorAll('.forex__tab')
-                .forEach(child => {
-                    child.classList.remove('forex__tab-active')
-                })
-            parent.classList.add('forex__tab-active')
-        }
-    })
-})
+        items.forEach((item) => {
+            item.style.minWidth = `${itemWidth}px`;
+        })
 
+        btnNext.addEventListener('click', () => {
+            const itemsLeft = itemsCount - (Math.abs(position) + slideToShow * itemWidth) / itemWidth;
 
-document.querySelectorAll('.forex__tab-content').forEach(item => {
-    item.addEventListener('click', () => {
-        const parent = item.parentNode;
+            position -= itemWidth + 20;
+            console.log(position)
+            setPosition()
+            checkBtn()
+        });
 
-        parent.classList.remove('forex__tab-active')
-    })
-})
+        btnPrev.addEventListener('click', () => {
+             const itemsLeft = Math.abs(position) / itemWidth;
 
+            position += itemWidth + 20;
+            setPosition()
+            checkBtn()
+        });
 
-// analytics
+        const setPosition = () => {
+            track.style.transform = `translateX(${position}px)`;
+        };
+
+        const checkBtn = () => {
+            btnNext.disabled = position <= -(itemsCount - slideToShow) * itemWidth;
+            btnPrev.disabled = position === 0;
+        };
+        checkBtn()
+    })();
 
 
 
 //registration
 
-const form = document.querySelector('#form'),
-      username = document.querySelector('#username'),
-      password = document.querySelector('#password'),
-      email = document.querySelector('#email'),
-      password2 = document.querySelector('#password2'),
-      phone = document.querySelector('#phone');
+    (function () {
+        const form = document.querySelector('#form'),
+            username = document.querySelector('#username'),
+            password = document.querySelector('#password'),
+            email = document.querySelector('#email'),
+            password2 = document.querySelector('#password2'),
+            phone = document.querySelector('#phone');
 
-form.addEventListener('click', (e) => {
-    e.preventDefault()
+        form.addEventListener('click', (e) => {
+            e.preventDefault();
 
-    checkInputs();
-})
+            checkInputs();
+        })
 
-function checkInputs() {
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
-    const phoneValue = phone.value.trim();
+        function checkInputs() {
+            const usernameValue = username.value.trim();
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+            const password2Value = password2.value.trim();
+            const phoneValue = phone.value.trim();
 
-    if(usernameValue === ''){
-        setErrorFor(username, 'Username cannot be blanked');
-    } else {
-        setSuccessFor(username, 'Username is valid');
-    }
-
-    if(emailValue === ''){
-        setErrorFor(email, 'Email cannot be blanked');
-    } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'Email is not valid');
-    } else {
-        setSuccessFor(email, 'Email is valid')
-    }
-
-    if(passwordValue === '') {
-        setErrorFor(password, 'Password cannot be blanked');
-    } else {
-        setSuccessFor(password, 'Password is valid');
-    }
-
-    if(password2Value === '') {
-        setErrorFor(password2, 'Repeat of password cannot be blanked');
-    } else if(passwordValue !== password2Value) {
-        setErrorFor(password2, 'Passwords does not match');
-    } else if(passwordValue === password2Value) {
-        successMessage(password2, 'Password is valid');
-    }else {
-        setSuccessFor(password2, 'Password is valid');
-    }
-
-    if(!isPhone(phoneValue)){
-        setErrorFor(phone, 'Phone number is not success');
-    } else{
-        setSuccessFor(phone, 'Phone is valid');
-    }
-}
-
-function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const small = formControl.querySelector('small');
-    small.innerText = message;
-    formControl.className = 'form-control error';
-}
-
-function setSuccessFor(input, message) {
-    const formControl = input.parentElement;
-    const smallPass = formControl.querySelector('small');
-    smallPass.innerText = message;
-    formControl.className = 'form-control success';
-}
-
-function successMessage(item, message) {
-    const formControl = item.parentElement;
-    const smallPass = formControl.querySelector('small');
-    smallPass.innerText = message;
-    formControl.className = 'form-control success';
-}
-
-function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
-
-function isPhone(phone) {
-    return /^\d[\d\(\)\ -]{4,14}\d$/.test(phone);
-}
-
-
-// footer
-
-
-    document.querySelectorAll('.about__title ').forEach(item => {
-        item.addEventListener('click', () => {
-            const parent = item.parentNode;
-
-            if(parent.classList.contains('active')) {
-                parent.classList.remove('active')
+            if(usernameValue === ''){
+                setErrorFor(username, 'Username cannot be blanked');
             } else {
-                document
-                    .querySelectorAll('.about__row')
-                    .forEach(child => {
-                        child.classList.remove('active')
-                    })
-                parent.classList.add('active')
+                setSuccessFor(username, 'Username is valid');
             }
-        })
-    })
 
-    document.querySelectorAll('.about__column').forEach(item => {
-        item.addEventListener('click', () => {
-            const parent = item.parentNode;
+            if(emailValue === ''){
+                setErrorFor(email, 'Email cannot be blanked');
+            } else if (!isEmail(emailValue)) {
+                setErrorFor(email, 'Email is not valid');
+            } else {
+                setSuccessFor(email, 'Email is valid');
+            }
 
-            parent.classList.remove('active')
-        })
-    })
+            if(passwordValue === '') {
+                setErrorFor(password, 'Password cannot be blanked');
+            } else {
+                setSuccessFor(password, 'Password is valid');
+            }
+
+            if(password2Value === '') {
+                setErrorFor(password2, 'Repeat of password cannot be blanked');
+            } else if(passwordValue !== password2Value) {
+                setErrorFor(password2, 'Passwords does not match');
+            } else if(passwordValue === password2Value) {
+                successMessage(password2, 'Password is valid');
+            }else {
+                setSuccessFor(password2, 'Password is valid');
+            }
+
+            if(!isPhone(phoneValue)){
+                setErrorFor(phone, 'Phone number is not success');
+            } else{
+                setSuccessFor(phone, 'Phone is valid');
+            }
+        }
+
+        function setErrorFor(input, message) {
+            const formControl = input.parentElement;
+            const small = formControl.querySelector('small');
+            small.innerText = message;
+            formControl.className = 'form-control error';
+        }
+
+        function setSuccessFor(input, message) {
+            const formControl = input.parentElement;
+            const smallPass = formControl.querySelector('small');
+            smallPass.innerText = message;
+            formControl.className = 'form-control success';
+        }
+
+        function successMessage(item, message) {
+            const formControl = item.parentElement;
+            const smallPass = formControl.querySelector('small');
+            smallPass.innerText = message;
+            formControl.className = 'form-control success';
+        }
+
+        function isEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+        function isPhone(phone) {
+            return /^\d[\d\(\)\ -]{4,14}\d$/.test(phone);
+        }
+    })();
+
+})();
 
 
+
+
+//second
+
+(function() {
+    let checkSecondPage = document.querySelector('.checkSecondPage')
+    if(!checkSecondPage) return
+
+    header()
+    accordionSlide('.about__title', '.about__column');
+})();

@@ -133,9 +133,9 @@
 
     @media (max-width: $sm-min) {
       &__column{
-        height: 0;
+        max-height: 0;
         overflow: hidden;
-        transition: height .5s ease;
+        transition: max-height .8s ease;
       }
       & .active .about__column{
         transition: height .5s ease;
@@ -159,6 +159,7 @@
     @include flex(center, flex-start);
     margin-bottom: 20px;
     color: $white;
+    transition: transform .5s ease;
     @media (max-width: $sm-min) {
       margin: 0;
       height: 40px;

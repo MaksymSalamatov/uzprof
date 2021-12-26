@@ -16,9 +16,12 @@
 		<title>UZPROF</title>
 	</head>
 	<body>
-		<div class="page-wrapper">
+		<div class="page-wrapper check">
+			<div class="page-overlay"></div>
+
 			<div class="page-content">
 				@@include('./blocks/header.html')
+				<div class="page-overlay"></div>
 
 				<section class="first-screen">
 					<div class="container">
@@ -364,7 +367,7 @@
 							</div>
 
 							<div class="investment__animation animation">
-								<div class="animation__line top">
+								<div class="animation__line animation__line-top">
 
 									<a href="#" class="animation__line_link">
 										<div class="animation__item">
@@ -428,7 +431,7 @@
 									</a>
 
 								</div>
-								<div class="animation__line bottom">
+								<div class="animation__line animation__line-bottom">
 									<a href="#" class="animation__line_link">
 										<div class="animation__item">
 											<img src="./img/investment/apple.png" alt="apple">
@@ -742,77 +745,216 @@
 							
 							<div class="analytics__slider slider">
 								<div class="slider__move">
-									<div class="slider__move-left arrow">
+									<button class="slider__move-left arrow btn-prev">
 										<img src="./img/analytics/arrowLeft.png" alt="left">
-									</div>
+									</button>
 									<a href="#" class="slider__move-text">All analytics</a>
-									<div class="slider__move-right arrow">
+									<button class="slider__move-right arrow btn-next">
 										<img src="./img/analytics/arrowRight.png" alt="right">
-									</div>
+									</button>
 								</div>
 
-								<div class="slider__body">
-									<div class="slider__item info ">
-										<div class="info__top">
-											<span class="info__top-date">Jan 30, 2022: </span>
-											<span class="info__top-name">Христофор Христофорович</span>
+								<div class="slider-container">
+									<div class="slider-track">
+										<div class="slider__item info ">
+											<div class="info__top_picture">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
 										</div>
-										<h4 class="info__title">
-											Prime Limited voting pilot shows strength of engagement from
-											GameStop holders
-										</h4>
-										<p class="info__text">Retail investors have captured headlines this year,
-											and none more so than thosesupporting Gamestop (GME), a beleaguered
-											gaming retailer ...
-										</p>
-										<a href="#" class="info__more">
-											Find out more
-										</a>
-										<div class="info__btns">
-											<a href="#" class="info__btns-left">Bitcoin</a>
-											<a href="#" class="info__btns-right">ADA</a>
+										<div class="slider__item info">
+											<div class="info__top_picture active">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
 										</div>
-									</div>
-									<div class="slider__item info info-active">
-										<div class="info__top">
-											<span class="info__top-date">Jan 30, 2022:   </span>
-											<span class="info__top-name">Христофор Христофорович</span>
+										<div class="slider__item info ">
+											<div class="info__top_picture ">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
 										</div>
-										<h4 class="info__title">
-											Prime Limited voting pilot shows strength of engagement from
-											GameStop holders
-										</h4>
-										<p class="info__text">Retail investors have captured headlines this year,
-											and none more so than thosesupporting Gamestop (GME), a beleaguered
-											gaming retailer ...
-										</p>
-										<a href="#" class="info__more">
-											Find out more
-										</a>
-										<div class="info__btns">
-											<a href="#" class="info__btns-left">Bitcoin</a>
-											<a href="#" class="info__btns-right">ADA</a>
+										<div class="slider__item info ">
+											<div class="info__top_picture">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
 										</div>
-									</div>
-									<div class="slider__item info">
-										<div class="info__top">
-											<span class="info__top-date">Jan 30, 2022: </span>
-											<span class="info__top-name">Христофор Христофорович</span>
+										<div class="slider__item info">
+											<div class="info__top_picture active">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
 										</div>
-										<h4 class="info__title">
-											Prime Limited voting pilot shows strength of engagement from
-											GameStop holders
-										</h4>
-										<p class="info__text">Retail investors have captured headlines this year,
-											and none more so than thosesupporting Gamestop (GME), a beleaguered
-											gaming retailer ...
-										</p>
-										<a href="#" class="info__more">
-											Find out more
-										</a>
-										<div class="info__btns">
-											<a href="#" class="info__btns-left">Bitcoin</a>
-											<a href="#" class="info__btns-right">ADA</a>
+										<div class="slider__item info ">
+											<div class="info__top_picture ">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
+										</div>
+										<div class="slider__item info ">
+											<div class="info__top_picture">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
+										</div>
+										<div class="slider__item info">
+											<div class="info__top_picture active">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
