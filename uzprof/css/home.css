@@ -1203,6 +1203,13 @@ strong {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
+.footer .title.active:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 50%;
+}
+
 .footer a {
   display: inline-block;
   margin-bottom: 12px;
@@ -2841,6 +2848,12 @@ strong {
   position: relative;
 }
 
+.forex__tab-title.active:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .forex__tab-title:after {
   content: url("../../img/meets/arrow.png");
   position: absolute;
@@ -2915,7 +2928,7 @@ strong {
 }
 
 .analytics__title {
-  text-align: center;
+  text-align: left;
   margin-bottom: 57px;
 }
 
@@ -2975,20 +2988,15 @@ strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  padding-top: 100px;
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-.analytics .slider__item {
-  min-width: 50%;
 }
 
 .analytics .slider__item-content {
@@ -2998,7 +3006,7 @@ strong {
 .analytics .slider .info {
   background-color: #ffffff;
   position: relative;
-  margin: 0 10px;
+  width: 50%;
 }
 
 .analytics .slider .info > * {
@@ -3772,7 +3780,7 @@ strong {
   }
 
   .analytics .slider .info {
-    width: 50%;
+    width: 100vw;
   }
 }
 
@@ -4025,6 +4033,10 @@ strong {
 
   .analytics {
     padding: 80px 0;
+  }
+
+  .analytics .slider__item {
+    max-width: 100%;
   }
 }
 
@@ -4355,9 +4367,5 @@ strong {
 
   .investment {
     padding-top: 450px;
-  }
-
-  .analytics .slider__item-content {
-    max-width: 300px;
   }
 }

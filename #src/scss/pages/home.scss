@@ -1441,6 +1441,9 @@
       @media (max-width: $sm-min) {
         @include fonts(18px, 18px, 700);
       }
+      &.active:after{
+        transform: rotate(180deg);
+      }
 
       &:after{
         content: url("../../img/meets/arrow.png");
@@ -1533,9 +1536,9 @@
   @media (max-width: $md-min) {
     padding: 80px 0;
   }
-  
+
   &__title{
-    text-align: center;
+    text-align: left;
     margin-bottom: 57px;
   }
 
@@ -1577,20 +1580,18 @@
     }
 
     &-track{
-      @include flex(center,  start);
-      padding-top: 100px;
+      @include flex(start,  start);
       transition: .5s ease;
     }
 
     &__item{
-      min-width: 50%;
+
+      @media (max-width: $md-min) {
+        max-width: 100%;
+      }
 
       &-content{
         padding: 20px ;
-
-        @media (max-width: $ss-min) {
-          max-width: 300px;
-        }
       }
     }
 
@@ -1598,12 +1599,11 @@
     .info{
       background-color: $white;
       position: relative;
-      margin: 0 10px;
+      width: 50%;
 
       @media (max-width: $lg-min) {
-        width: 50%;
+        width: 100vw;
       }
-
 
       & > *{
         margin-bottom: 30px;

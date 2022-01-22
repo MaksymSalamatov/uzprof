@@ -16,7 +16,7 @@
 		<title>UZPROF</title>
 	</head>
 	<body>
-		<div class="page-wrapper check">
+		<div class="page-wrapper check checkLogin">
 			<div class="page-overlay"></div>
 
 			<div class="page-content">
@@ -44,10 +44,10 @@
                 <div class="header__menu menu header__change">
                     <ul class="menu__main ">
                         <li class="menu__items">
-                            <a href="./second.html" class="menu__links">For traders</a>
+                            <a href="./forTraders.html" class="menu__links">For traders</a>
                             <span></span>
                             <ul class="menu__submenu">
-                                <li><a href="./second.html">For traders</a></li>
+                                <li><a href="./forTraders.html">For traders</a></li>
                             </ul>
                         </li>
                         <li class="menu__items">
@@ -92,11 +92,11 @@
                                 <div class="login__picture">
                                     <img src="./img/firstScreen/login.png" alt="login" class="login__img">
                                 </div>
-                                <div class="login__text">Login</div>
+                                <a href="./registration.html" class="login__text">Login</a>
                             </button>
                         </div>
                         <div class="header__btn btn">
-                             <a class="header__btn_register" href="#">Register</a>
+                             <a href="./registration.html" class="header__btn_register" href="#">Register</a>
                          </div>
                     </div>
                 </div>
@@ -1053,6 +1053,56 @@
 												</div>
 											</div>
 										</div>
+										<div class="slider__item info">
+											<div class="info__top_picture active">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
+										</div>
+										<div class="slider__item info">
+											<div class="info__top_picture active">
+											</div>
+											<div class="slider__item-content">
+												<div class="info__top">
+													<span class="info__top-date">Jan 30, 2022: </span>
+													<span class="info__top-name">Христофор Христофорович</span>
+												</div>
+												<h4 class="info__title">
+													Prime Limited voting pilot shows strength of engagement from
+													GameStop holders
+												</h4>
+												<p class="info__text">Retail investors have captured headlines this year,
+													and none more so than thosesupporting Gamestop (GME), a beleaguered
+													gaming retailer ...
+												</p>
+												<a href="#" class="info__more">
+													Find out more
+												</a>
+												<div class="info__btns">
+													<a href="#" class="info__btns-left">Bitcoin</a>
+													<a href="#" class="info__btns-right">ADA</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1066,11 +1116,20 @@
 							<h2 class="registration__title">
 								Создайте <span class="registration__title-blue">аккаунт</span> уже сейчас
 							</h2>
-							<div class="form" id="form">
+
+							<form class="form">
 
 								<div class="form-control">
 									<label>Username</label>
-									<input type="text" placeholder="username" id="username">
+									<input type="text" placeholder="username" class="username">
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>
+
+								<div class="form-control">
+									<label>Surname</label>
+									<input type="text" placeholder="surname" class="surname">
 									<i class="fas fa-check-circle"></i>
 									<i class="fas fa-exclamation-circle"></i>
 									<small>Error message</small>
@@ -1078,7 +1137,7 @@
 
 								<div class="form-control">
 									<label>Email</label>
-									<input type="email" placeholder="example@gmail.com" id="email">
+									<input type="email" placeholder="example@gmail.com" class="email">
 									<i class="fas fa-check-circle"></i>
 									<i class="fas fa-exclamation-circle"></i>
 									<small>Error message</small>
@@ -1086,7 +1145,7 @@
 
 								<div class="form-control">
 									<label>Password</label>
-									<input type="password" placeholder="password" id="password">
+									<input type="password" placeholder="password" class="password">
 									<i class="fas fa-check-circle"></i>
 									<i class="fas fa-exclamation-circle"></i>
 									<small>Error message</small>
@@ -1094,7 +1153,7 @@
 
 								<div class="form-control">
 									<label>Password check</label>
-									<input type="password" placeholder="password again" id="password2">
+									<input type="password" placeholder="password again" class="password2">
 									<i class="fas fa-check-circle"></i>
 									<i class="fas fa-exclamation-circle"></i>
 									<small>Error message</small>
@@ -1102,14 +1161,14 @@
 
 								<div class="form-control">
 									<label>Phone number</label>
-									<input type="tel" placeholder="phone number" id="phone">
+									<input type="tel" placeholder="phone number" class="phone">
 									<i class="fas fa-check-circle"></i>
 									<i class="fas fa-exclamation-circle"></i>
 									<small>Error message</small>
 								</div>
 
 									<button class="btn">Submit</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</section>
