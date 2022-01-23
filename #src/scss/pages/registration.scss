@@ -28,6 +28,7 @@
     .info{
       color: $white;
       height: 90vh;
+      max-height: 800px;
       background-image: url("../../img/registry/bg.png");
       padding: 100px 60px;
 
@@ -283,14 +284,25 @@
 
 
         #form-login{
-          flex-direction: column;
-          width: 100%;
+          width: 40vw;
           @media (max-width: $md-min) {
+            flex-direction: column;
             width: 100%;
+          }
+          @media (max-width: $lg-min) {
+            width: 100vw;
           }
 
           .form-control{
-            width: 40vw;
+            width: 280px;
+
+            @media (max-width: $xl-mid) {
+              width: 240px;
+            }
+
+            @media (max-width: $lg-min) {
+              width: 40vw;
+            }
 
             @media (max-width: $md-min) {
               width: 90vw;

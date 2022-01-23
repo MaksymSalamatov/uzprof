@@ -114,10 +114,12 @@ section {
 
 body {
   line-height: 1;
+  height: 100%;
 }
 
 html {
   font-family: "Rubik", sans-serif;
+  height: 100%;
 }
 
 ol,
@@ -1589,6 +1591,7 @@ strong {
 .registration__content .info {
   color: #ffffff;
   height: 90vh;
+  max-height: 800px;
   background-image: url("../../img/registry/bg.png");
   padding: 100px 60px;
 }
@@ -1795,15 +1798,11 @@ strong {
 }
 
 .registration__content .login__body #form-login {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
+  width: 40vw;
 }
 
 .registration__content .login__body #form-login .form-control {
-  width: 40vw;
+  width: 280px;
 }
 
 .registration__content .login__body #form-login .form-control input {
@@ -1865,6 +1864,10 @@ strong {
   }
 
   .registration__content .login__body .form-control {
+    width: 240px;
+  }
+
+  .registration__content .login__body #form-login .form-control {
     width: 240px;
   }
 }
@@ -2109,6 +2112,14 @@ strong {
     width: 40vw;
   }
 
+  .registration__content .login__body #form-login {
+    width: 100vw;
+  }
+
+  .registration__content .login__body #form-login .form-control {
+    width: 40vw;
+  }
+
   .registration__content .login__body .registrationBtn {
     width: 40%;
   }
@@ -2163,6 +2174,10 @@ strong {
   }
 
   .registration__content .login__body #form-login {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
   }
 
