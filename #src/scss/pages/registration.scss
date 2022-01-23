@@ -10,7 +10,8 @@
 
 .registration{
   flex: 1 1 auto;
-  padding: 50px 0;
+  padding: 30px 0 0 0 ;
+  background-color: $grey-light;
 
   @media (max-width: $lg-min) {
     padding: 0;
@@ -19,26 +20,31 @@
     padding-top: 80px;
     @include flex(flex-start, flex-start);
 
-    @media (max-width: $md-min) {
+    @media (max-width: $lg-min) {
       flex-direction: column;
+      @include flex(center, center);
     }
+
     .info{
       color: $white;
-      max-width: 715px;
+      height: 90vh;
       background-image: url("../../img/registry/bg.png");
       padding: 100px 60px;
-      margin-right: 50px;
 
-      @media (max-width: $md-min) {
-        order: 2;
-        margin:0;
-        padding: 20px 10px;
-        background-image: none;
-        background-color: $blue;
+      @media (max-width: $xl-mid) {
+        padding: 100px 20px;
+        height: 100%;
       }
 
-      @media (max-width: $sm-min) {
-        display: none;
+      @media (max-width: $lg-min) {
+        padding: 0;
+        margin-top: 100px;
+      }
+
+      @media (max-width: $lg-min) {
+        order: 2;
+        width: 100vw;
+        background: $blue;
       }
 
       &__content{
@@ -47,10 +53,10 @@
         padding: 50px 91px 34px 83px;
 
         @media (max-width: $xl-mid) {
-          padding: 20px 50px 0 ;
+          padding: 20px;
         }
-        @media (max-width: $md-min) {
-          padding: 0;
+        @media (max-width: $lg-min) {
+          text-align: center;
         }
       }
 
@@ -81,16 +87,28 @@
         }
 
         &__item{
-          flex-basis: 50%;
           margin-bottom: 30px;
         }
       }
     }
 
+
+
     .login{
+      padding: 0 20px;
+      height: 90vh;
+
+      @media (max-width: $xl-mid) {
+        height: 100%;
+      }
       @media (max-width: $lg-min) {
         order: 1;
-        margin-bottom: 100px;
+        width: 100vw;
+      }
+
+      @media (max-width: $md-min) {
+        width: 90%;
+        height: auto;
       }
 
       &__choice{
@@ -99,6 +117,8 @@
 
         @media (max-width: $sm-min) {
           text-align: left;
+          margin-bottom: 0;
+          width: 200px;
         }
 
         .tabs__nav h3{
@@ -132,6 +152,8 @@
       &__body{
         position: relative;
         width: 100%;
+        @include flex(center, space-between);
+        flex-direction: column;
 
         .tabs{
           display: none;
@@ -139,39 +161,46 @@
 
         .tabs.is-active{
           @include flex(flex-start, space-around);
+          @media (max-width: $lg-min) {
+            @include flex(center, space-around);
+          }
         }
 
         .form{
+          background-color: $grey-light;
+          width: 40vw;
           @include fonts(18px, 28px, 700);
-
-
-          @media (max-width: $md-min) {
-            flex-direction: column;
+          @media (max-width: $lg-min) {
+            width: 100%;
           }
 
             &_columns{&:not(:last-child) {
               margin-right: 30px;
-
-              @media (max-width: $md-min) {
-                margin-right: 20px;
-              }
-              @media (max-width: $sm-min) {
+              @media (max-width: $lg-min) {
                 margin-right: 0;
               }
             }
           }
+          @media (max-width: $md-min) {
+            flex-direction: column;
+            width: 100vw;
+          }
 
           &-control{
             padding: 15px 0;
-            width: 300px;
+            width: 280px;
             position: relative;
+
+            @media (max-width: $xl-mid) {
+              width: 240px;
+            }
+
+            @media (max-width: $lg-min) {
+              width: 40vw;
+            }
 
             @media (max-width: $md-min) {
               width: 90vw;
-            }
-
-            &:not(:last-child){
-              margin-bottom: 10px;
             }
 
             &.success input{
@@ -229,20 +258,41 @@
               bottom: -12px;
               left: 0;
             }
+
+            .password{
+              position: relative;
+
+              &-control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(45%);
+                right: 46px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+
+
+                &.view {
+                  background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+                }
+              }
+            }
           }
         }
 
 
         #form-login{
           flex-direction: column;
-          @media (max-width: $sm-min) {
-            width: 90vw;
+          width: 100%;
+          @media (max-width: $md-min) {
+            width: 100%;
           }
 
           .form-control{
-            width: 500px;
+            width: 40vw;
 
-            @media (max-width: $sm-min) {
+            @media (max-width: $md-min) {
               width: 90vw;
             }
 
@@ -253,11 +303,17 @@
         }
 
         .registrationBtn {
-          position: absolute;
-          right: 0;
-          margin-top: 20px;
-          min-width: 100%;
+          margin-top: 40px;
+          width: 90%;
           padding: 18px 0;
+
+
+          @media (max-width: $lg-min) {
+            width: 40%;
+          }
+          @media (max-width: $md-min) {
+            width: 90vw;
+          }
         }
       }
     }

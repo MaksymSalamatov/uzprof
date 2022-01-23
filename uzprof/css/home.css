@@ -1491,7 +1491,7 @@ strong {
           justify-content: space-between;
 }
 
-.header__registry .login__picture {
+.header__registry .login__picture img {
   margin-right: 10px;
 }
 
@@ -3163,6 +3163,27 @@ strong {
   visibility: hidden;
   bottom: -12px;
   left: 0;
+}
+
+.registration__content .form-control .password {
+  position: relative;
+}
+
+.registration__content .form-control .password-control {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(45%);
+      -ms-transform: translateY(45%);
+          transform: translateY(45%);
+  right: 46px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+}
+
+.registration__content .form-control .password-control.view {
+  background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
 }
 
 .registration__content .form .btn {

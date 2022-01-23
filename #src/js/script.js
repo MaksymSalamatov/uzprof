@@ -42,11 +42,13 @@ function accordionSlide(clickedItem, itemToShow) {
                 })
                 content.style.maxHeight = content.scrollHeight + 'px'
 
-
                 document.querySelectorAll(clickedItem).forEach(item => {
                     item.classList.remove('active');
                 })
                 item.classList.add('active');
+                content.addEventListener('click', () => {
+                    item.classList.remove('active');
+                })
             }
         })
     })
@@ -61,7 +63,7 @@ function accordionSlide(clickedItem, itemToShow) {
 }
 
 (function () {
-   let check = document.querySelector('.check')
+   let check = document.querySelector('.checkLoginMain')
     if(!check) return
 
     header()
@@ -227,6 +229,27 @@ function writeLogin() {
     function isPhone(phone) {
         return /^\d[\d\(\)\ -]{4,14}\d$/.test(phone);
     }
+
+
+    (function () {
+        let showPassIcon = document.querySelectorAll('.password-control');
+        let input = document.querySelectorAll('.password');
+
+
+        showPassIcon.forEach(elem => {
+            elem.addEventListener('click', (e) => {
+                input.forEach(item => {
+                    if(item.getAttribute('type') === 'password') {
+                        elem.classList.add('view');
+                        item.setAttribute('type', 'text');
+                    } else {
+                        elem.classList.remove('view');
+                        item.setAttribute('type', 'password');
+                    }
+                })
+            })
+        })
+    })()
 }
 
 //loginLogin
@@ -236,12 +259,13 @@ function writeLogin() {
     if(!registration) return
 
     checkLogin()
+    accordionSlide('.about__title', '.about__column');
 
 })()
 
 function checkLogin() {
     let foo = s => document.querySelector(s),
-        form = document.querySelector('.form'),
+        form = document.querySelector('.formLogin'),
         usernameLogin = foo('.username-login'),
         passwordLogin = foo('.password-login');
 
@@ -292,7 +316,7 @@ function checkLogin() {
 })();
 
 
-// login
+// loginPage
 
 (function () {
     const checkLogin = document.querySelectorAll('.checkLogin');

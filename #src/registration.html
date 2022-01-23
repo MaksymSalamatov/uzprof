@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<div class="page-wrapper checkLogin">
+<div class="page-wrapper checkLogin ">
     <div class="page-overlay"></div>
     <div class="page-content">
         @@include('./blocks/header.html')
@@ -71,7 +71,7 @@
 
                             <div class="login__body">
 
-                                <form action="#" class="form tabs is-active tab-1">
+                                <form action="#" class="formSignUp form tabs is-active tab-1">
 
                                     <div class="form_columns">
                                         <div class="form-control">
@@ -111,6 +111,7 @@
                                         <div class="form-control">
                                             <label>Password</label>
                                             <input type="password" placeholder="password" class="password">
+                                            <a href="#" class="password-control"></a>
                                             <i class="fas fa-check-circle"></i>
                                             <i class="fas fa-exclamation-circle"></i>
                                             <small>Error message</small>
@@ -118,7 +119,8 @@
 
                                         <div class="form-control">
                                             <label>Password check</label>
-                                            <input type="password" placeholder="password again" class="password2">
+                                            <input type="password" placeholder="password again" class="password2 password">
+                                            <a href="#" class="password-control"></a>
                                             <i class="fas fa-check-circle"></i>
                                             <i class="fas fa-exclamation-circle"></i>
                                             <small>Error message</small>
@@ -127,7 +129,7 @@
 
                                 </form>
 
-                                <form action="#" class="form tabs   tab-2" id="form-login">
+                                <form action="#" class="formLogin tabs   tab-2" id="form-login">
 
                                     <div class="form-control">
                                         <label>Username</label>

@@ -1749,6 +1749,26 @@
           bottom: -12px;
           left: 0;
         }
+
+        .password{
+          position: relative;
+
+          &-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(45%);
+            right: 46px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+
+
+            &.view {
+              background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+            }
+          }
+        }
       }
       .btn{
         margin-top: 20px;

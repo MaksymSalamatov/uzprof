@@ -17,7 +17,7 @@
 </head>
 <body class="body">
 
-<div class="page-wrapper checkLogin">
+<div class="page-wrapper checkLogin ">
     <div class="page-overlay"></div>
     <div class="page-content">
         <header class="header" id="header">
@@ -90,14 +90,16 @@
                         <div class="header__login login ">
                             <button class="login__enterence">
                                 <div class="login__picture">
-                                    <img src="./img/firstScreen/login.png" alt="login" class="login__img">
+                                    <a href="./registration.html" class="login__text">
+                                        <img src="./img/firstScreen/login.png" alt="login" class="login__img">
+                                        Login
+                                    </a>
                                 </div>
-                                <a href="./registration.html" class="login__text">Login</a>
                             </button>
                         </div>
-                        <div class="header__btn btn">
-                             <a href="./registration.html" class="header__btn_register" href="#">Register</a>
-                         </div>
+                        <a href="./registration.html">
+                            <div class="header__btn btn">Register</div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -168,7 +170,7 @@
 
                             <div class="login__body">
 
-                                <form action="#" class="form tabs is-active tab-1">
+                                <form action="#" class="formSignUp form tabs is-active tab-1">
 
                                     <div class="form_columns">
                                         <div class="form-control">
@@ -208,6 +210,7 @@
                                         <div class="form-control">
                                             <label>Password</label>
                                             <input type="password" placeholder="password" class="password">
+                                            <a href="#" class="password-control"></a>
                                             <i class="fas fa-check-circle"></i>
                                             <i class="fas fa-exclamation-circle"></i>
                                             <small>Error message</small>
@@ -215,7 +218,8 @@
 
                                         <div class="form-control">
                                             <label>Password check</label>
-                                            <input type="password" placeholder="password again" class="password2">
+                                            <input type="password" placeholder="password again" class="password2 password">
+                                            <a href="#" class="password-control"></a>
                                             <i class="fas fa-check-circle"></i>
                                             <i class="fas fa-exclamation-circle"></i>
                                             <small>Error message</small>
@@ -224,7 +228,7 @@
 
                                 </form>
 
-                                <form action="#" class="form tabs   tab-2" id="form-login">
+                                <form action="#" class="formLogin tabs   tab-2" id="form-login">
 
                                     <div class="form-control">
                                         <label>Username</label>

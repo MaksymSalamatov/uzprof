@@ -1491,7 +1491,7 @@ strong {
           justify-content: space-between;
 }
 
-.header__registry .login__picture {
+.header__registry .login__picture img {
   margin-right: 10px;
 }
 
@@ -1569,7 +1569,8 @@ strong {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 50px 0;
+  padding: 30px 0 0 0;
+  background-color: #F9F9FB;
 }
 
 .registration__content {
@@ -1587,10 +1588,9 @@ strong {
 
 .registration__content .info {
   color: #ffffff;
-  max-width: 715px;
+  height: 90vh;
   background-image: url("../../img/registry/bg.png");
   padding: 100px 60px;
-  margin-right: 50px;
 }
 
 .registration__content .info__content {
@@ -1627,9 +1627,12 @@ strong {
 }
 
 .registration__content .info .reliable__item {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   margin-bottom: 30px;
+}
+
+.registration__content .login {
+  padding: 0 20px;
+  height: 90vh;
 }
 
 .registration__content .login__choice {
@@ -1664,6 +1667,19 @@ strong {
 .registration__content .login__body {
   position: relative;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .registration__content .login__body .tabs {
@@ -1682,6 +1698,8 @@ strong {
 }
 
 .registration__content .login__body .form {
+  background-color: #F9F9FB;
+  width: 40vw;
   font-size: 18px;
   line-height: 28px;
   font-weight: 700;
@@ -1693,12 +1711,8 @@ strong {
 
 .registration__content .login__body .form-control {
   padding: 15px 0;
-  width: 300px;
+  width: 280px;
   position: relative;
-}
-
-.registration__content .login__body .form-control:not(:last-child) {
-  margin-bottom: 10px;
 }
 
 .registration__content .login__body .form-control.success input {
@@ -1759,15 +1773,37 @@ strong {
   left: 0;
 }
 
+.registration__content .login__body .form-control .password {
+  position: relative;
+}
+
+.registration__content .login__body .form-control .password-control {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(45%);
+      -ms-transform: translateY(45%);
+          transform: translateY(45%);
+  right: 46px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+}
+
+.registration__content .login__body .form-control .password-control.view {
+  background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+}
+
 .registration__content .login__body #form-login {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .registration__content .login__body #form-login .form-control {
-  width: 500px;
+  width: 40vw;
 }
 
 .registration__content .login__body #form-login .form-control input {
@@ -1775,10 +1811,8 @@ strong {
 }
 
 .registration__content .login__body .registrationBtn {
-  position: absolute;
-  right: 0;
-  margin-top: 20px;
-  min-width: 100%;
+  margin-top: 40px;
+  width: 90%;
   padding: 18px 0;
 }
 
@@ -1817,8 +1851,21 @@ strong {
     max-width: 1300px;
   }
 
+  .registration__content .info {
+    padding: 100px 20px;
+    height: 100%;
+  }
+
   .registration__content .info__content {
-    padding: 20px 50px 0;
+    padding: 20px;
+  }
+
+  .registration__content .login {
+    height: 100%;
+  }
+
+  .registration__content .login__body .form-control {
+    width: 240px;
   }
 }
 
@@ -1991,6 +2038,39 @@ strong {
     padding: 0;
   }
 
+  .registration__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .registration__content .info {
+    padding: 0;
+    margin-top: 100px;
+  }
+
+  .registration__content .info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100vw;
+    background: #003458;
+  }
+
+  .registration__content .info__content {
+    text-align: center;
+  }
+
   .registration__content .info__about-small {
     margin-bottom: 0;
   }
@@ -2003,7 +2083,34 @@ strong {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin-bottom: 100px;
+    width: 100vw;
+  }
+
+  .registration__content .login__body .tabs.is-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .registration__content .login__body .form {
+    width: 100%;
+  }
+
+  .registration__content .login__body .form_columns:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .registration__content .login__body .form-control {
+    width: 40vw;
+  }
+
+  .registration__content .login__body .registrationBtn {
+    width: 40%;
   }
 }
 
@@ -2038,25 +2145,9 @@ strong {
     max-width: 690px;
   }
 
-  .registration__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .registration__content .info {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin: 0;
-    padding: 20px 10px;
-    background-image: none;
-    background-color: #003458;
-  }
-
-  .registration__content .info__content {
-    padding: 0;
+  .registration__content .login {
+    width: 90%;
+    height: auto;
   }
 
   .registration__content .login__body .form {
@@ -2064,13 +2155,22 @@ strong {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .registration__content .login__body .form_columns:not(:last-child) {
-    margin-right: 20px;
+    width: 100vw;
   }
 
   .registration__content .login__body .form-control {
+    width: 90vw;
+  }
+
+  .registration__content .login__body #form-login {
+    width: 100%;
+  }
+
+  .registration__content .login__body #form-login .form-control {
+    width: 90vw;
+  }
+
+  .registration__content .login__body .registrationBtn {
     width: 90vw;
   }
 }
@@ -2227,24 +2327,10 @@ strong {
     padding-right: 40px;
   }
 
-  .registration__content .info {
-    display: none;
-  }
-
   .registration__content .login__choice {
     text-align: left;
-  }
-
-  .registration__content .login__body .form_columns:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .registration__content .login__body #form-login {
-    width: 90vw;
-  }
-
-  .registration__content .login__body #form-login .form-control {
-    width: 90vw;
+    margin-bottom: 0;
+    width: 200px;
   }
 }
 

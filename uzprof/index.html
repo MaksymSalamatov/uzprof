@@ -16,7 +16,7 @@
 		<title>UZPROF</title>
 	</head>
 	<body>
-		<div class="page-wrapper check checkLogin">
+		<div class="page-wrapper check checkLoginMain">
 			<div class="page-overlay"></div>
 
 			<div class="page-content">
@@ -90,14 +90,16 @@
                         <div class="header__login login ">
                             <button class="login__enterence">
                                 <div class="login__picture">
-                                    <img src="./img/firstScreen/login.png" alt="login" class="login__img">
+                                    <a href="./registration.html" class="login__text">
+                                        <img src="./img/firstScreen/login.png" alt="login" class="login__img">
+                                        Login
+                                    </a>
                                 </div>
-                                <a href="./registration.html" class="login__text">Login</a>
                             </button>
                         </div>
-                        <div class="header__btn btn">
-                             <a href="./registration.html" class="header__btn_register" href="#">Register</a>
-                         </div>
+                        <a href="./registration.html">
+                            <div class="header__btn btn">Register</div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1146,6 +1148,7 @@
 								<div class="form-control">
 									<label>Password</label>
 									<input type="password" placeholder="password" class="password">
+									<a href="#" class="password-control"></a>
 									<i class="fas fa-check-circle"></i>
 									<i class="fas fa-exclamation-circle"></i>
 									<small>Error message</small>
@@ -1153,7 +1156,8 @@
 
 								<div class="form-control">
 									<label>Password check</label>
-									<input type="password" placeholder="password again" class="password2">
+									<input type="password" placeholder="password again" class=" password password2">
+									<a href="#" class="password-control"></a>
 									<i class="fas fa-check-circle"></i>
 									<i class="fas fa-exclamation-circle"></i>
 									<small>Error message</small>

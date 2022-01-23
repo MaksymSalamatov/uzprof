@@ -1491,7 +1491,7 @@ strong {
           justify-content: space-between;
 }
 
-.header__registry .login__picture {
+.header__registry .login__picture img {
   margin-right: 10px;
 }
 

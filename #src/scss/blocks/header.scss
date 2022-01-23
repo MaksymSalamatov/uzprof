@@ -257,7 +257,9 @@
         @include flex(center, space-between);
       }
       &__picture{
-        margin-right: 10px;
+        img{
+          margin-right: 10px;
+        }
       }
       @media (max-width: $lg-min) {
         margin-bottom: 20px;
