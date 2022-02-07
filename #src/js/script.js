@@ -362,3 +362,15 @@ function changeTabs() {
         })
     }
 }
+
+// third page
+
+// footer
+(function () {
+    let checkAboutPage = document.querySelector('.checkAboutPage');
+    if(!checkAboutPage) return;
+
+    header()
+
+    accordionSlide('.about__title', '.about__column');
+})()
