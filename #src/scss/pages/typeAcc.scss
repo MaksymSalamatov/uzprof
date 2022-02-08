@@ -62,21 +62,34 @@
     }
 
     &__table{
+      @media (max-width: $md-min) {
+        overflow: scroll;
+      }
+
       table{
         width: 100%;
 
         th{
+          padding: 26px 0;
+          border-top: 3px solid $grey-light;
+
+          @media (max-width: $lg-min) {
+            min-width: 200px;
+          }
           @media (max-width: $md-min) {
             max-width: 60px;
           }
+
         }
 
         tr{
           text-align: center;
+          &:nth-child(2n) {
+            background-color: $grey-light;
+          }
         }
         td{
           padding: 26px 0;
-
           &:first-child{
           text-align: left;
           padding-left: 30px;
@@ -85,13 +98,15 @@
             @media (max-width: $md-min) {
               padding-left: 10px;
             }
-        }
-        }
-      }
+          }
 
-      &_display{
-        @media (max-width: $sm-min) {
-          display: none;
+          img{
+            margin-right: 18px;
+
+            @media (max-width: $sm-min) {
+              margin-right: 4px;
+            }
+          }
         }
       }
 
@@ -185,6 +200,10 @@
             left: -2px;
             border-radius: 0 0 52px 12px;
             background-color: $blue-light;
+          }
+
+          &:after{
+            transition: background-color .5s ease;
           }
 
           &:hover{
@@ -312,6 +331,166 @@
       }
     }
   }
+
+.advantages{
+  &__title{
+    margin-bottom: 93px;
+
+    @media (max-width: $md-min) {
+      margin-bottom: 43px;
+    }
+  }
+
+  &__table{
+    @media (max-width: $md-min) {
+      overflow: scroll;
+    }
+
+    table{
+      border-top: 3px solid $grey-light;
+      width: 100%;
+      margin-bottom: 81px;
+
+      @media (max-width: $md-min) {
+        margin-bottom: 41px;
+      }
+    }
+
+    tr{
+      text-align: center;
+      &:nth-child(2n) {
+        background-color: $grey-light;
+      }
+
+      th{
+        padding: 27px 0;
+        color: $black;
+        &:first-child{
+          text-align: left;
+          padding-left: 20px;
+        }
+
+        @media (max-width: $lg-min) {
+          min-width: 200px;
+        }
+      }
+
+      td{
+        padding: 27px 0;
+        &:first-child{
+          text-align: left;
+          padding-left: 20px;
+
+          @media (max-width: $md-min) {
+            padding-left: 4px;
+          }
+        }
+
+        img{
+          margin-right: 18px;
+
+          @media (max-width: $md-min) {
+            margin-right: 4px;
+          }
+
+          @media (max-width: $sm-min) {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  &__block{
+    padding-bottom: 50px;
+    @media (max-width: $md-min) {
+      padding-top: 30px;
+    }
+    .items{
+      @include flex(flex-start, space-between);
+
+      @media (max-width: $xl-mid) {
+        @include flex(flex-start, space-around);
+        flex-wrap: wrap;
+      }
+      &:not(:last-child) {
+        align-items: stretch;
+      }
+
+      .item{
+        @media (max-width: $xl-mid) {
+          max-width: 400px;
+        }
+
+        @media (max-width: $lg-min) {
+          margin-bottom: 20px;
+          max-width: 350px;
+        }
+
+        @media (max-width: $md-min) {
+          max-width: 250px;
+        }
+
+        @media (max-width: $sm-min) {
+          max-width: 100%;
+        }
+
+
+        &:not(:last-child) {
+          background-color: $grey-light;
+          padding: 33px 40px 51px;
+          border-radius: 10px 10px 20px 20px;
+          margin-right: 30px;
+
+          @media (max-width: $xl-mid) {
+            margin-right: 0;
+          }
+
+          @media (max-width: $lg-min) {
+            padding: 20px;
+          }
+        }
+
+        &__picture{
+          margin-bottom: 30px;
+        }
+
+        &__title{
+          margin-bottom: 15px;
+          min-width: 280px;
+
+          @media (max-width: $md-min) {
+            min-width: 100%;
+          }
+        }
+
+        &__link{
+          padding-top: 50px;
+
+          @media (max-width: $lg-min) {
+            padding-top: 10px;
+          }
+
+          @media (max-width: $sm-min) {
+            max-width: 90%;
+          }
+
+          &-text{
+            margin-bottom: 40px;
+          }
+
+          &-btn{
+            padding: 22px 85px;
+
+            @media (max-width: $md-min) {
+              padding: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 .banner{
 
