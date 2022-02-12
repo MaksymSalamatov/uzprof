@@ -1850,6 +1850,10 @@ strong {
     max-width: 1300px;
   }
 
+  .header__registry {
+    margin-left: 40px;
+  }
+
   .registration__content .info {
     padding: 100px 20px;
     height: 100%;

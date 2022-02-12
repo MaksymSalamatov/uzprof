@@ -73,6 +73,7 @@ function css() {
 		`${path.src.css}/pages/forTraders.scss`,
 		`${path.src.css}/pages/about.scss`,
 		`${path.src.css}/pages/typeAcc.scss`,
+		`${path.src.css}/pages/education.scss`,
 		`${path.src.css}/pages/registration.scss`,// Добавляем новый scss файл для страницы
 	])
 		.pipe(

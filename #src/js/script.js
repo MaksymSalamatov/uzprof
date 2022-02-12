@@ -1,4 +1,4 @@
-// burger
+// header function for every page
 
 function header() {
     const burger = document.querySelector('.burger'),
@@ -22,6 +22,8 @@ function header() {
         })
     });
 }
+
+// accordion function for forex and footer
 
 function accordionSlide(clickedItem, itemToShow) {
     document.querySelectorAll(clickedItem).forEach((item) => {
@@ -62,6 +64,8 @@ function accordionSlide(clickedItem, itemToShow) {
     })
 }
 
+// main page call
+
 (function () {
    let check = document.querySelector('.checkLoginMain')
     if(!check) return
@@ -69,7 +73,7 @@ function accordionSlide(clickedItem, itemToShow) {
     header()
 
 
-/// forex
+/// forex accordion on main page call
     let checkForex = document.querySelector('.forex__tab-title')
     if(checkForex){
         accordionSlide('.forex__tab-title', '.forex__tab-content');
@@ -78,7 +82,7 @@ function accordionSlide(clickedItem, itemToShow) {
         accordionSlide('.about__title', '.about__column');
     }
 
-// slide-show
+// slider on main page
 
     (function () {
         let position = 0;
@@ -128,7 +132,7 @@ function accordionSlide(clickedItem, itemToShow) {
     writeLogin();
 })();
 
-//registration
+// registration on main page
 
 function writeLogin() {
     const foo = s => document.querySelector(s),
@@ -252,7 +256,30 @@ function writeLogin() {
     })()
 }
 
-//loginLogin
+//second
+
+(function() {
+    let checkSecondPage = document.querySelector('.checkSecondPage')
+    if(!checkSecondPage) return
+
+    header()
+    accordionSlide('.about__title', '.about__column');
+})();
+
+
+// loginPage call
+
+(function () {
+    const checkLogin = document.querySelectorAll('.checkLogin');
+    checkLogin.forEach(item => {
+        if(!checkLogin) return
+
+        writeLogin()
+        header()
+    })
+})();
+
+// loginPage registration call
 
 (function () {
     let registration = document.querySelector('.registration-login');
@@ -305,30 +332,7 @@ function checkLogin() {
     }
 }
 
-//second
-
-(function() {
-    let checkSecondPage = document.querySelector('.checkSecondPage')
-    if(!checkSecondPage) return
-
-    header()
-    accordionSlide('.about__title', '.about__column');
-})();
-
-
-// loginPage
-
-(function () {
-    const checkLogin = document.querySelectorAll('.checkLogin');
-    checkLogin.forEach(item => {
-        if(!checkLogin) return
-
-        writeLogin()
-        header()
-    })
-})();
-
-//tabs
+// loginPage tabs call
 
 (function () {
     let registration = document.querySelector('.registration-login');
@@ -363,9 +367,8 @@ function changeTabs() {
     }
 }
 
-// third page
+// Type of account call
 
-// footer
 (function () {
     let checkAboutPage = document.querySelector('.checkAboutPage');
     if(!checkAboutPage) return;

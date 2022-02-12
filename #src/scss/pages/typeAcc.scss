@@ -506,7 +506,6 @@
 
       &__container{
         color: $white;
-        z-index: 2;
         @include flex(center, center);
 
         @media (max-width: $md-min) {
@@ -519,6 +518,7 @@
       }
       &__info{
         max-width: 722px;
+        z-index: 2;
 
         @media (max-width: $md-min) {
           margin-bottom: 40px;
@@ -529,6 +529,7 @@
         display: block;
         margin-left: 119px;
         padding: 22px 110px;
+        z-index: 2;
 
         @media (max-width: $lg-min) {
           margin-left: 50px;
@@ -545,7 +546,7 @@
 
       &__img_eclipse, &__img_elements{
         position: absolute;
-        z-index: 1;
+        z-index: 0;
       }
 
       &__img_eclipse{

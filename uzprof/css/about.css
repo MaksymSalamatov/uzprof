@@ -1934,6 +1934,10 @@ strong {
     max-width: 1300px;
   }
 
+  .header__registry {
+    margin-left: 40px;
+  }
+
   .information__info {
     display: -webkit-box;
     display: -ms-flexbox;

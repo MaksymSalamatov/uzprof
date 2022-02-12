@@ -1956,7 +1956,6 @@ strong {
 
 .banner__container {
   color: #ffffff;
-  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1975,18 +1974,20 @@ strong {
 
 .banner__info {
   max-width: 722px;
+  z-index: 2;
 }
 
 .banner__btn {
   display: block;
   margin-left: 119px;
   padding: 22px 110px;
+  z-index: 2;
 }
 
 .banner__img_eclipse,
 .banner__img_elements {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 
 .banner__img_eclipse {
@@ -2032,6 +2033,10 @@ strong {
 
   .container {
     max-width: 1300px;
+  }
+
+  .header__registry {
+    margin-left: 40px;
   }
 
   .advantages__block .items {

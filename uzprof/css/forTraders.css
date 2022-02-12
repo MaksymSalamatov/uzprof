@@ -1792,6 +1792,10 @@ strong {
   .container {
     max-width: 1300px;
   }
+
+  .header__registry {
+    margin-left: 40px;
+  }
 }
 
 @media (max-width: 1200px) {
