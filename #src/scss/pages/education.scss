@@ -1,3 +1,224 @@
 @import '../basik/index';
 @import '../customize/index';
 @import '../blocks/index';
+
+.mobile{
+  padding-top: 130px;
+
+  &__link{
+    padding-bottom: 70px;
+    &-none{
+      font-weight: bold;
+    }
+  }
+
+  &__title{
+    color: $black;
+    margin-bottom: 60px;
+  }
+
+  .platform{
+    margin-bottom: 150px;
+    color: $black;
+    @include flex(center, space-between);
+    margin-left: calc(8% - 20px);
+
+    @media (max-width: $lg-min) {
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: $md-min) {
+      margin-left: 0;
+    }
+
+    &__info{
+      @media (max-width: $md-min) {
+        width: 100%;
+      }
+    }
+
+    &__title{
+      margin-bottom: 30px;
+    }
+
+    &__text{
+      max-width: 680px;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle{
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+
+    .buttons{
+        @include flex(center, space-between);
+
+      @media (max-width: $sm-min) {
+        flex-direction: column;
+      }
+
+      &__picture{
+        margin-right: 8px;
+        @media (max-width: $sm-min) {
+          margin-right: 20px;
+        }
+      }
+
+      &__title{
+        margin-bottom: -5px;
+      }
+
+      &__shop{
+        font-weight: bold;
+      }
+
+      &__item{
+        cursor: pointer;
+        border: 1px solid $black;
+        border-radius: 6px;
+        transition: all .3s ease;
+        @include flex(center, center);
+        width: 206px;
+
+        @media (max-width: $sm-min) {
+          width: 70%;
+        }
+
+        &:not(:last-child) {
+          margin-right: 20px;
+
+          @media (max-width: $sm-min) {
+            margin: 0 0 20px 0;
+          }
+        }
+
+        &:hover{
+          transform: scale(1.05);
+          transition: all .3s ease;
+          box-shadow: 2px 1px 19px 5px rgba(0,0,0,0.91);
+        }
+      }
+    }
+
+    &__picture{
+      @media (max-width: $md-min) {
+        display: none;
+      }
+    }
+  }
+}
+
+.banner{
+  margin-bottom: 150px;
+  margin-right: calc(8% - 20px);
+  background-color: $blue;
+  border-radius: 5px 5px 75px 5px;
+  padding: 80px 170px;
+  position: relative;
+
+  @media (max-width: $xl-mid) {
+    margin-right: 0;
+    padding: 80px 100px;
+  }
+
+  @media (max-width: $md-min) {
+    padding: 90px;
+  }
+  @media (max-width: $sm-min) {
+    padding: 120px 10px 80px 20px;
+  }
+
+
+  .text{
+    &__title{
+      z-index: 2;
+      color: $white;
+      margin-bottom: 40px;
+
+      @media (max-width: $sm-min) {
+        max-width: 180px;
+      }
+    }
+
+    &__columns{
+      @include flex(center, flex-start);
+
+      @media (max-width: $lg-min) {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+      }
+    }
+
+    &__info{
+      @include flex(center, flex-start);
+
+      @media (max-width: $lg-min) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: $md-min) {
+        flex-direction: column;
+      }
+    }
+
+    &__item{
+      margin-bottom: 15px;
+      position: relative;
+
+      &:before{
+        content: "";
+        position: absolute;
+        background-color: $white;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        left: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:not(:last-child) {
+        margin-right: 70px;
+
+        @media (max-width: $md-min) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__btn{
+      transition: all .3s ease;
+      .btn{
+        background: transparent;
+        border: 1px solid $white;
+        padding: 22px 85px;
+
+        @media (max-width: $xl-mid) {
+          padding: 22px 45px;
+        }
+
+        &:hover{
+          color: $white;
+        }
+      }
+      &:hover{
+        transform: scale(1.05);
+        transition: all .3s ease;
+      }
+    }
+  }
+
+  &__picture{
+    position: absolute;
+
+    &-yellow{
+      top: 15px;
+      left: 15px;
+    }
+    &-sky{
+      z-index: 1;
+      top: 15px;
+      right: 0;
+    }
+  }
+}

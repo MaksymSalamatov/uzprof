@@ -1373,9 +1373,9 @@ strong {
 .header__menu .menu__submenu {
   visibility: hidden;
   position: absolute;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
   color: #687086;
   width: 160px;
 }
@@ -1556,6 +1556,212 @@ strong {
   left: 40px;
 }
 
+.mobile {
+  padding-top: 130px;
+}
+
+.mobile__link {
+  padding-bottom: 70px;
+}
+
+.mobile__link-none {
+  font-weight: bold;
+}
+
+.mobile__title {
+  color: #0A1F32;
+  margin-bottom: 60px;
+}
+
+.mobile .platform {
+  margin-bottom: 150px;
+  color: #0A1F32;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: calc(8% - 20px);
+}
+
+.mobile .platform__title {
+  margin-bottom: 30px;
+}
+
+.mobile .platform__text {
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+.mobile .platform__subtitle {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.mobile .platform .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mobile .platform .buttons__picture {
+  margin-right: 8px;
+}
+
+.mobile .platform .buttons__title {
+  margin-bottom: -5px;
+}
+
+.mobile .platform .buttons__shop {
+  font-weight: bold;
+}
+
+.mobile .platform .buttons__item {
+  cursor: pointer;
+  border: 1px solid #0A1F32;
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 206px;
+}
+
+.mobile .platform .buttons__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mobile .platform .buttons__item:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.91);
+          box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.91);
+}
+
+.banner {
+  margin-bottom: 150px;
+  margin-right: calc(8% - 20px);
+  background-color: #003458;
+  border-radius: 5px 5px 75px 5px;
+  padding: 80px 170px;
+  position: relative;
+}
+
+.banner .text__title {
+  z-index: 2;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.banner .text__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.banner .text__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.banner .text__item {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.banner .text__item:before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: -25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner .text__item:not(:last-child) {
+  margin-right: 70px;
+}
+
+.banner .text__btn {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.banner .text__btn .btn {
+  background: transparent;
+  border: 1px solid #ffffff;
+  padding: 22px 85px;
+}
+
+.banner .text__btn .btn:hover {
+  color: #ffffff;
+}
+
+.banner .text__btn:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.banner__picture {
+  position: absolute;
+}
+
+.banner__picture-yellow {
+  top: 15px;
+  left: 15px;
+}
+
+.banner__picture-sky {
+  z-index: 1;
+  top: 15px;
+  right: 0;
+}
+
 @media (max-width: 1919px) {
   .container-max {
     max-width: 1880px;
@@ -1593,6 +1799,15 @@ strong {
 
   .header__registry {
     margin-left: 40px;
+  }
+
+  .banner {
+    margin-right: 0;
+    padding: 80px 100px;
+  }
+
+  .banner .text__btn .btn {
+    padding: 22px 45px;
   }
 }
 
@@ -1760,6 +1975,30 @@ strong {
   .header__registry .login {
     margin-bottom: 20px;
   }
+
+  .mobile .platform {
+    margin-bottom: 70px;
+  }
+
+  .banner .text__columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .banner .text__info {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -1791,6 +2030,33 @@ strong {
 
   .container {
     max-width: 690px;
+  }
+
+  .mobile .platform {
+    margin-left: 0;
+  }
+
+  .mobile .platform__info {
+    width: 100%;
+  }
+
+  .mobile .platform__picture {
+    display: none;
+  }
+
+  .banner {
+    padding: 90px;
+  }
+
+  .banner .text__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .banner .text__item:not(:last-child) {
+    margin-right: 0;
   }
 }
 
@@ -1944,6 +2210,33 @@ strong {
 
   .header__select {
     padding-right: 40px;
+  }
+
+  .mobile .platform .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .mobile .platform .buttons__picture {
+    margin-right: 20px;
+  }
+
+  .mobile .platform .buttons__item {
+    width: 70%;
+  }
+
+  .mobile .platform .buttons__item:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+
+  .banner {
+    padding: 120px 10px 80px 20px;
+  }
+
+  .banner .text__title {
+    max-width: 180px;
   }
 }
 
