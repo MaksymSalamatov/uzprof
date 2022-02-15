@@ -122,8 +122,13 @@
     padding: 80px 100px;
   }
 
+  @media (max-width: $lg-min) {
+    margin-bottom: 100px;
+  }
+
   @media (max-width: $md-min) {
     padding: 90px;
+    margin-bottom: 70px;
   }
   @media (max-width: $sm-min) {
     padding: 120px 10px 80px 20px;
@@ -219,6 +224,245 @@
       z-index: 1;
       top: 15px;
       right: 0;
+    }
+  }
+}
+
+.meta-trader{
+  margin-bottom: 150px;
+
+  @media (max-width: $xl-mid) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $md-min) {
+    margin-bottom: 50px;
+  }
+
+  &__title{
+    margin-bottom: 60px;
+
+    @media (max-width: $lg-min) {
+      @include fonts(40px, 50px, 700);
+    }
+    @media (max-width: $md-min) {
+      width: 520px;
+    }
+    @media (max-width: $sm-min) {
+      width: 100%;
+    }
+  }
+
+  &__analytics{
+    margin-bottom: 80px;
+  }
+
+  &__info{
+    @include flex(flex-start, flex-start);
+
+    @media (max-width: $md-min) {
+      @include flex(center, flex-start);
+     flex-direction: column;
+    }
+  }
+
+  .info{
+    &__analytics{
+      max-width: 682px;
+      position: relative;
+      padding-left: 40px;
+      margin-right: 111px;
+
+      @media (max-width: $xl-mid) {
+        margin-right: 50px;
+        max-width: 582px;
+      }
+
+      @media (max-width: $lg-min) {
+        max-width: 882px;
+        width: 100%;
+        margin: 0 0 50px 0;
+      }
+
+      &:before{
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 90%;
+        left: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $black;
+      }
+    }
+
+    &__items{
+      @include flex(center, space-between);
+    }
+
+    .items{
+      &__list{
+        flex-basis: 50%;
+      }
+
+      &__left {
+        margin-right: 80px;
+
+        @media (max-width: $xl-mid) {
+          margin-right: 40px;
+        }
+      }
+
+      &__list{
+        @include flex(center, space-between);
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &__picture{
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .achievements{
+    @include flex(flex-start, space-between);
+
+    @media (max-width: $xl-mid) {
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    &__item{
+      max-width: 360px;
+      background-color: $grey-light;
+      border-radius: 10px;
+      padding: 27px 35px 45px;
+      align-items: stretch;
+
+      @media (max-width: $xl-mid) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $md-min) {
+        max-width: 800px;
+        width: 100%;
+      }
+    }
+
+    &__picture{
+      width: 33px;
+      height: 33px;
+      margin-bottom: 24px;
+    }
+
+    &__title{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.platform{
+  margin-bottom: 150px;
+  @media (max-width: $lg-min) {
+    margin-bottom: 90px;
+  }
+  @media (max-width: $sm-min) {
+    margin-bottom: 50px;
+  }
+  &__title{
+    margin-bottom: 60px;
+  }
+
+  &__preview{
+    margin-bottom: 150px;
+
+    @media (max-width: $lg-min) {
+      margin-bottom: 90px;
+    }
+
+    @media (max-width: $md-min) {
+      overflow-x: scroll;
+    }
+
+    &_img{
+      width: 100%;
+
+      @media (max-width: $md-min) {
+        width: 700px;
+      }
+    }
+  }
+
+  &__desktop{
+    @include flex(flex-start, space-between);
+
+    @media (max-width: $lg-min) {
+      @include flex(center, space-between);
+      flex-direction: column;
+    }
+  }
+  .desktop{
+    &__info{
+      @media (max-width: $lg-min) {
+        margin-bottom: 50px;
+      }
+    }
+    &__title{
+      margin-bottom: 30px;
+    }
+
+    &__text{
+      max-width: 620px;
+      margin-bottom: 50px;
+      @media (max-width: $lg-min) {
+        max-width: 1000px;
+        width: 100%;
+      }
+    }
+
+    .buttons{
+      @include flex(center, space-around);
+
+      @media (max-width: $lg-min) {
+        @include flex(center, center);
+      }
+
+      @media (max-width: $sm-min) {
+        flex-direction: column;
+      }
+
+      &__btn{
+        max-width: 300px;
+        background-color: $blue;
+        color: $white;
+
+        @media (max-width: $sm-min) {
+          width: 100%;
+          text-align: center;
+        }
+
+        &:first-child{
+          margin-right: 30px;
+
+          @media (max-width: $sm-min) {
+            margin: 0 0 30px 0;
+          }
+        }
+      }
+    }
+
+    &__picture{
+      @media (max-width: $xl-mid) {
+        width: 50%;
+      }
+
+      @media (max-width: $lg-min) {
+        width: 100%;
+      }
     }
   }
 }

@@ -1,0 +1,272 @@
+@import '../basik/index';
+@import '../customize/index';
+@import '../blocks/index';
+
+body{
+  background-color: $grey-light;
+}
+
+.news{
+  background-color: $white;
+  padding-top: 130px;
+  margin-bottom: 150px;
+
+  @media (max-width: $lg-min) {
+    margin-bottom: 70px;
+  }
+
+  &__link{
+    margin-bottom: 70px;
+    &-none{
+      font-weight: bold;
+    }
+  }
+
+  &__content{
+    @include flex(center, space-between);
+
+    @media (max-width: $lg-min) {
+      flex-direction: column;
+    }
+  }
+
+  &__info{
+    max-width: 620px;
+    margin-right: 50px;
+
+    @media (max-width: $lg-min) {
+      margin-bottom: 30px;
+      max-width: 1000px;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__title{
+    margin-bottom: 40px;
+  }
+
+  &__subtitle{
+    color: $grey-lighter;
+    margin-bottom: 30px;
+  }
+
+  &__text{
+    margin-bottom: 30px;
+  }
+  .text{
+    &__paragraph{
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__buttons{
+    @include flex(center, flex-start);
+
+    @media (max-width: $sm-min) {
+      flex-direction: column;
+    }
+  }
+
+  .buttons{
+    &__item{
+      max-width: 103px;
+      text-align: center;
+      background-color: $white;
+      color: $blue-light;
+      border: 1px solid $blue-light;
+      border-radius: 0;
+
+      @media (max-width: $sm-min) {
+        max-width: 603px;
+        width: 90%;
+      }
+
+      &:hover{
+        transform: scale(1.05);
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+
+        @media (max-width: $sm-min) {
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+
+  &__picture{
+    width: 60%;
+
+    @media (max-width: $lg-min) {
+      width: 100%;
+    }
+  }
+}
+
+.banner{
+  background-color: $blue;
+  margin-right: calc(10% - 20px);
+  border-radius: 0 10px 50px 0;
+  padding: 45px 200px 45px 270px;
+  color: $white;
+  position: relative;
+  min-height: 270px;
+  margin-bottom: 150px;
+
+  @media (max-width: $lg-min) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $xl-mid) {
+    padding: 45px 100px 45px 200px;
+  }
+
+  @media (max-width: $md-min) {
+    padding: 45px 50px 45px 160px;
+  }
+
+  @media (max-width: $md-min) {
+    padding: 45px 0 88px;
+  }
+
+  &__title{
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__info{
+    max-width: 775px;
+    z-index: 3;
+    margin-right: 40px;
+
+    @media (max-width: $lg-min) {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__content{
+    @include flex(center, space-between);
+
+    @media (max-width: $lg-min) {
+      @include flex(flex-start, space-between);
+      flex-direction: column;
+    }
+  }
+
+  &__btn{
+    width: 300px;
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    text-align: center;
+    z-index: 3;
+
+    @media (max-width: $md-min) {
+      width: 90%;
+    }
+  }
+
+  &__picture{
+    position: absolute;
+    z-index: 1;
+
+    &-left{
+      top: 20px;
+      left: 20px;
+
+      @media (max-width: $md-min) {
+        display: none;
+      }
+    }
+
+    &-right{
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
+
+.other-news{
+  background-color: $grey-light;
+  margin-bottom: 150px;
+
+  @media (max-width: $md-min) {
+    margin-bottom: 70px;
+  }
+  &__title{
+    margin-bottom: 60px;
+  }
+
+  &__content{
+    @include flex(flex-start, space-between);
+
+    @media (max-width: $xl-mid) {
+      overflow: scroll;
+    }
+  }
+
+  &__item{
+    background-color: $white;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .item{
+    padding-bottom: 44px;
+    &__picture{
+      margin-bottom: 20px;
+
+      @media (max-width: $sm-min) {
+        width: 90vw;
+      }
+    }
+
+    &__subtitle{
+      color: $grey-lighter;
+      margin-bottom: 15px;
+    }
+
+    &__title{
+      margin-bottom: 20px;
+    }
+
+    &__info{
+      max-width: 407px;
+      margin: 0 auto;
+
+      @media (max-width: $sm-min) {
+        max-width: 307px;
+      }
+    }
+
+    &__text{
+      margin-bottom: 20px;
+    }
+
+    &__links{
+      color: $orange;
+      display: inline-block;
+
+      @include flex(center, flex-start);
+
+      &_text, &_picture{
+        cursor: pointer;
+      }
+
+      .text{
+        margin-right: 10px;
+        transition: margin-right .3s ease;
+
+        &:hover{
+          margin-right: 20px;
+          transition: margin-right .3s ease;
+        }
+      }
+    }
+  }
+}

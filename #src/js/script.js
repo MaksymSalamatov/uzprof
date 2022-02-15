@@ -288,7 +288,7 @@ function writeLogin() {
     checkLogin()
     accordionSlide('.about__title', '.about__column');
 
-})()
+})();
 
 function checkLogin() {
     let foo = s => document.querySelector(s),
@@ -340,7 +340,7 @@ function checkLogin() {
     if(!registration) return
 
     changeTabs()
-})()
+})();
 
 function changeTabs() {
     let tabNav = document.querySelectorAll('.tabs__nav'),
@@ -376,4 +376,24 @@ function changeTabs() {
     header()
 
     accordionSlide('.about__title', '.about__column');
-})()
+})();
+
+
+// education page call
+(function () {
+    let checkEducationPage = document.querySelector('.checkEducation');
+    if(!checkEducationPage) return;
+
+    header()
+
+    accordionSlide('.about__title', '.about__column');
+})();
+
+(function () {
+    let checkNews = document.querySelector('.checkNews');
+    if(!checkNews) return;
+
+    header()
+
+    accordionSlide('.about__title', '.about__column');
+})();

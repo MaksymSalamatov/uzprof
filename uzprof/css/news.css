@@ -1556,53 +1556,25 @@ strong {
   left: 40px;
 }
 
-.mobile {
+body {
+  background-color: #F9F9FB;
+}
+
+.news {
+  background-color: #ffffff;
   padding-top: 130px;
-}
-
-.mobile__link {
-  padding-bottom: 70px;
-}
-
-.mobile__link-none {
-  font-weight: bold;
-}
-
-.mobile__title {
-  color: #0A1F32;
-  margin-bottom: 60px;
-}
-
-.mobile .platform {
   margin-bottom: 150px;
-  color: #0A1F32;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-left: calc(8% - 20px);
 }
 
-.mobile .platform__title {
-  margin-bottom: 30px;
+.news__link {
+  margin-bottom: 70px;
 }
 
-.mobile .platform__text {
-  max-width: 680px;
-  margin-bottom: 20px;
-}
-
-.mobile .platform__subtitle {
+.news__link-none {
   font-weight: bold;
-  margin-bottom: 50px;
 }
 
-.mobile .platform .buttons {
+.news__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1614,68 +1586,29 @@ strong {
           justify-content: space-between;
 }
 
-.mobile .platform .buttons__picture {
-  margin-right: 8px;
+.news__info {
+  max-width: 620px;
+  margin-right: 50px;
 }
 
-.mobile .platform .buttons__title {
-  margin-bottom: -5px;
-}
-
-.mobile .platform .buttons__shop {
-  font-weight: bold;
-}
-
-.mobile .platform .buttons__item {
-  cursor: pointer;
-  border: 1px solid #0A1F32;
-  border-radius: 6px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 206px;
-}
-
-.mobile .platform .buttons__item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.mobile .platform .buttons__item:hover {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.91);
-          box-shadow: 2px 1px 19px 5px rgba(0, 0, 0, 0.91);
-}
-
-.banner {
-  margin-bottom: 150px;
-  margin-right: calc(8% - 20px);
-  background-color: #003458;
-  border-radius: 5px 5px 75px 5px;
-  padding: 80px 170px;
-  position: relative;
-}
-
-.banner .text__title {
-  z-index: 2;
-  color: #ffffff;
+.news__title {
   margin-bottom: 40px;
 }
 
-.banner .text__columns {
+.news__subtitle {
+  color: #E2E2E2;
+  margin-bottom: 30px;
+}
+
+.news__text {
+  margin-bottom: 30px;
+}
+
+.news .text__paragraph:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.news__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1687,254 +1620,173 @@ strong {
           justify-content: flex-start;
 }
 
-.banner .text__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.banner .text__item {
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.banner .text__item:before {
-  content: "";
-  position: absolute;
+.news .buttons__item {
+  max-width: 103px;
+  text-align: center;
   background-color: #ffffff;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  left: -25px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  color: #73CBE8;
+  border: 1px solid #73CBE8;
+  border-radius: 0;
 }
 
-.banner .text__item:not(:last-child) {
-  margin-right: 70px;
-}
-
-.banner .text__btn {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.banner .text__btn .btn {
-  background: transparent;
-  border: 1px solid #ffffff;
-  padding: 22px 85px;
-}
-
-.banner .text__btn .btn:hover {
-  color: #ffffff;
-}
-
-.banner .text__btn:hover {
+.news .buttons__item:hover {
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+}
+
+.news .buttons__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.news__picture {
+  width: 60%;
+}
+
+.banner {
+  background-color: #003458;
+  margin-right: calc(10% - 20px);
+  border-radius: 0 10px 50px 0;
+  padding: 45px 200px 45px 270px;
+  color: #ffffff;
+  position: relative;
+  min-height: 270px;
+  margin-bottom: 150px;
+}
+
+.banner__title {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.banner__info {
+  max-width: 775px;
+  z-index: 3;
+  margin-right: 40px;
+}
+
+.banner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner__btn {
+  width: 300px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  text-align: center;
+  z-index: 3;
 }
 
 .banner__picture {
   position: absolute;
-}
-
-.banner__picture-yellow {
-  top: 15px;
-  left: 15px;
-}
-
-.banner__picture-sky {
   z-index: 1;
-  top: 15px;
-  right: 0;
 }
 
-.meta-trader {
+.banner__picture-left {
+  top: 20px;
+  left: 20px;
+}
+
+.banner__picture-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.other-news {
+  background-color: #F9F9FB;
   margin-bottom: 150px;
 }
 
-.meta-trader__title {
+.other-news__title {
   margin-bottom: 60px;
 }
 
-.meta-trader__analytics {
-  margin-bottom: 80px;
-}
-
-.meta-trader__info {
+.other-news__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.other-news__item {
+  background-color: #ffffff;
+}
+
+.other-news__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.other-news .item {
+  padding-bottom: 44px;
+}
+
+.other-news .item__picture {
+  margin-bottom: 20px;
+}
+
+.other-news .item__subtitle {
+  color: #E2E2E2;
+  margin-bottom: 15px;
+}
+
+.other-news .item__title {
+  margin-bottom: 20px;
+}
+
+.other-news .item__info {
+  max-width: 407px;
+  margin: 0 auto;
+}
+
+.other-news .item__text {
+  margin-bottom: 20px;
+}
+
+.other-news .item__links {
+  color: #FF813A;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.meta-trader .info__analytics {
-  max-width: 682px;
-  position: relative;
-  padding-left: 40px;
-  margin-right: 111px;
+.other-news .item__links_text,
+.other-news .item__links_picture {
+  cursor: pointer;
 }
 
-.meta-trader .info__analytics:before {
-  position: absolute;
-  content: "";
-  width: 3px;
-  height: 90%;
-  left: 1px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: #0A1F32;
+.other-news .item__links .text {
+  margin-right: 10px;
+  -webkit-transition: margin-right 0.3s ease;
+  -o-transition: margin-right 0.3s ease;
+  transition: margin-right 0.3s ease;
 }
 
-.meta-trader .info__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.meta-trader .info .items__list {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-.meta-trader .info .items__left {
-  margin-right: 80px;
-}
-
-.meta-trader .info .items__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.meta-trader .info .items__list:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.meta-trader .info .items__picture {
-  margin-right: 15px;
-}
-
-.meta-trader .achievements {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.meta-trader .achievements__item {
-  max-width: 360px;
-  background-color: #F9F9FB;
-  border-radius: 10px;
-  padding: 27px 35px 45px;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.meta-trader .achievements__picture {
-  width: 33px;
-  height: 33px;
-  margin-bottom: 24px;
-}
-
-.meta-trader .achievements__title {
-  margin-bottom: 24px;
-}
-
-.platform {
-  margin-bottom: 150px;
-}
-
-.platform__title {
-  margin-bottom: 60px;
-}
-
-.platform__preview {
-  margin-bottom: 150px;
-}
-
-.platform__preview_img {
-  width: 100%;
-}
-
-.platform__desktop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.platform .desktop__title {
-  margin-bottom: 30px;
-}
-
-.platform .desktop__text {
-  max-width: 620px;
-  margin-bottom: 50px;
-}
-
-.platform .desktop .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.platform .desktop .buttons__btn {
-  max-width: 300px;
-  background-color: #003458;
-  color: #ffffff;
-}
-
-.platform .desktop .buttons__btn:first-child {
-  margin-right: 30px;
+.other-news .item__links .text:hover {
+  margin-right: 20px;
+  -webkit-transition: margin-right 0.3s ease;
+  -o-transition: margin-right 0.3s ease;
+  transition: margin-right 0.3s ease;
 }
 
 @media (max-width: 1919px) {
@@ -1977,40 +1829,11 @@ strong {
   }
 
   .banner {
-    margin-right: 0;
-    padding: 80px 100px;
+    padding: 45px 100px 45px 200px;
   }
 
-  .banner .text__btn .btn {
-    padding: 22px 45px;
-  }
-
-  .meta-trader {
-    margin-bottom: 100px;
-  }
-
-  .meta-trader .info__analytics {
-    margin-right: 50px;
-    max-width: 582px;
-  }
-
-  .meta-trader .info .items__left {
-    margin-right: 40px;
-  }
-
-  .meta-trader .achievements {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .meta-trader .achievements__item {
-    margin-bottom: 40px;
-  }
-
-  .platform .desktop__picture {
-    width: 50%;
+  .other-news__content {
+    overflow: scroll;
   }
 }
 
@@ -2179,61 +2002,43 @@ strong {
     margin-bottom: 20px;
   }
 
-  .mobile .platform {
+  .news {
     margin-bottom: 70px;
   }
 
-  .banner {
-    margin-bottom: 100px;
-  }
-
-  .banner .text__columns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .news__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 
-  .banner .text__info {
+  .news__info {
     margin-bottom: 30px;
-  }
-
-  .meta-trader__title {
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 700;
-  }
-
-  .meta-trader .info__analytics {
-    max-width: 882px;
+    max-width: 1000px;
     width: 100%;
-    margin: 0 0 50px 0;
+    margin-right: 0;
   }
 
-  .platform {
-    margin-bottom: 90px;
+  .news__picture {
+    width: 100%;
   }
 
-  .platform__preview {
-    margin-bottom: 90px;
+  .banner {
+    margin-bottom: 70px;
   }
 
-  .platform__desktop {
+  .banner__info {
+    margin: 0 0 40px;
+  }
+
+  .banner__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2241,31 +2046,6 @@ strong {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .platform .desktop__info {
-    margin-bottom: 50px;
-  }
-
-  .platform .desktop__text {
-    max-width: 1000px;
-    width: 100%;
-  }
-
-  .platform .desktop .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .platform .desktop__picture {
-    width: 100%;
   }
 }
 
@@ -2300,69 +2080,24 @@ strong {
     max-width: 690px;
   }
 
-  .mobile .platform {
-    margin-left: 0;
-  }
-
-  .mobile .platform__info {
-    width: 100%;
-  }
-
-  .mobile .platform__picture {
-    display: none;
+  .banner {
+    padding: 45px 50px 45px 160px;
   }
 
   .banner {
-    padding: 90px;
+    padding: 45px 0 88px;
+  }
+
+  .banner__btn {
+    width: 90%;
+  }
+
+  .banner__picture-left {
+    display: none;
+  }
+
+  .other-news {
     margin-bottom: 70px;
-  }
-
-  .banner .text__info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .banner .text__item:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .meta-trader {
-    margin-bottom: 50px;
-  }
-
-  .meta-trader__title {
-    width: 520px;
-  }
-
-  .meta-trader__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .meta-trader .achievements__item {
-    max-width: 800px;
-    width: 100%;
-  }
-
-  .platform__preview {
-    overflow-x: scroll;
-  }
-
-  .platform__preview_img {
-    width: 700px;
   }
 }
 
@@ -2518,55 +2253,28 @@ strong {
     padding-right: 40px;
   }
 
-  .mobile .platform .buttons {
+  .news__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 
-  .mobile .platform .buttons__picture {
-    margin-right: 20px;
+  .news .buttons__item {
+    max-width: 603px;
+    width: 90%;
   }
 
-  .mobile .platform .buttons__item {
-    width: 70%;
+  .news .buttons__item:not(:last-child) {
+    margin: 0 0 20px;
   }
 
-  .mobile .platform .buttons__item:not(:last-child) {
-    margin: 0 0 20px 0;
+  .other-news .item__picture {
+    width: 90vw;
   }
 
-  .banner {
-    padding: 120px 10px 80px 20px;
-  }
-
-  .banner .text__title {
-    max-width: 180px;
-  }
-
-  .meta-trader__title {
-    width: 100%;
-  }
-
-  .platform {
-    margin-bottom: 50px;
-  }
-
-  .platform .desktop .buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .platform .desktop .buttons__btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .platform .desktop .buttons__btn:first-child {
-    margin: 0 0 30px 0;
+  .other-news .item__info {
+    max-width: 307px;
   }
 }
 
