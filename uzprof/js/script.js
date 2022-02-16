@@ -370,8 +370,19 @@ function changeTabs() {
 // Type of account call
 
 (function () {
-    let checkAboutPage = document.querySelector('.checkAboutPage');
-    if(!checkAboutPage) return;
+    let checkAccount = document.querySelector('.checkAccount');
+    if(!checkAccount) return;
+
+    header()
+
+    accordionSlide('.about__title', '.about__column');
+})();
+
+
+// about page call
+(function () {
+    let checkAbout = document.querySelector('.checkAbout');
+    if(!checkAbout) return;
 
     header()
 
@@ -388,6 +399,8 @@ function changeTabs() {
 
     accordionSlide('.about__title', '.about__column');
 })();
+
+// news page call
 
 (function () {
     let checkNews = document.querySelector('.checkNews');
